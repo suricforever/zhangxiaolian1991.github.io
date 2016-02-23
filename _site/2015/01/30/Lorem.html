@@ -61,31 +61,30 @@
                 <section>
     <div class="container">
         <header class="major">
-            <h2>initWithFrame 和 initWithCoder 的区别</h2>
-                <p class="post-meta">Feb 23, 2016</p>
+            <h2>Lorem</h2>
+                <p class="post-meta">Jan 30, 2015</p>
         </header>
 
         <section class="post-content">
             <p><img src="/images/pic02.jpg" />
 当我们所写的程序里没用用Nib文件(XIB)时,用代码控制视图内容，需要调用initWithFrame去初始化
-- (id)initWithFrame:(CGRect)frame
+<code>- (id)initWithFrame:(CGRect)frame 
 {
-    if (self =[superinitWithFrame:frame]) {
-        // 初始化代码
-    }
-    return self;
+if (self =[superinitWithFrame:frame]) {
+// 初始化代码
 }
-
-</p>
+return self;
+}</code></p>
 
 <p>用于视图加载nib文件，从nib中加载对象实例时，使用 initWithCoder初始化这些实例对象
-- (id)initWithCoder:(NSCoder*)coder
+<code>- (id)initWithCoder:(NSCoder*)coder
 {
-    if (self =[superinitWithcoder:coder]) {
-        // 初始化代码
-    }
-    return self;
-}</p>
+if (self =[superinitWithcoder:coder]) {
+// 初始化代码
+}
+return self;
+}</code></p>
+
         </section>
         
         <footer>
