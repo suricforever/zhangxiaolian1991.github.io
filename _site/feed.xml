@@ -5,22 +5,22 @@
     <description>Suric</description>
     <link>http://zhangxiaolian.com/</link>
     <atom:link href="http://zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Mar 2016 17:40:42 +0800</pubDate>
-    <lastBuildDate>Tue, 29 Mar 2016 17:40:42 +0800</lastBuildDate>
+    <pubDate>Tue, 29 Mar 2016 18:05:18 +0800</pubDate>
+    <lastBuildDate>Tue, 29 Mar 2016 18:05:18 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>cocoapods use and create</title>
         <description>&lt;h3 id=&quot;install&quot;&gt;Install&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo gem install cocoapods
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cocoapods&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;init&quot;&gt;Init&lt;/h3&gt;
 &lt;p&gt;Enter project directory&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pod init
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;ruby
+  pod init
+&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;find Podfile，enter&lt;/p&gt;
 

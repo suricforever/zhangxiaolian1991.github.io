@@ -26,4 +26,3 @@ sass:
 # Build settings
 markdown  : kramdown
 permalink : /:title/
-highlighter: pygments
