@@ -5,18 +5,19 @@
     <description>Suric</description>
     <link>http://zhangxiaolian.com/</link>
     <atom:link href="http://zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Mar 2016 16:46:15 +0800</pubDate>
-    <lastBuildDate>Tue, 29 Mar 2016 16:46:15 +0800</lastBuildDate>
+    <pubDate>Tue, 29 Mar 2016 16:58:52 +0800</pubDate>
+    <lastBuildDate>Tue, 29 Mar 2016 16:58:52 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>cocoapods use and create</title>
-        <description>&lt;h3 id=&quot;install&quot;&gt;Install&lt;/h3&gt;
+        <description>&lt;h3&gt;Install&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo gem install cocoapods
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&quot;init&quot;&gt;Init&lt;/h3&gt;
+&lt;h3&gt;Init&lt;/h3&gt;
+
 &lt;p&gt;Enter project directory&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;pod init
@@ -49,9 +50,10 @@ end
 &lt;pre&gt;&lt;code&gt;#import &amp;lt;Reachability/Reachability.h&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&quot;publish-cocoapod&quot;&gt;Publish cocoapod&lt;/h1&gt;
+&lt;h1&gt;Publish cocoapod&lt;/h1&gt;
 
-&lt;h3 id=&quot;create-the-project&quot;&gt;1、Create the Project&lt;/h3&gt;
+&lt;h3&gt;1、Create the Project&lt;/h3&gt;
+
 &lt;p&gt;under your work directory（demo as &lt;strong&gt;BlinkingLabel&lt;/strong&gt; )&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;pod lib create BlinkingLabel
@@ -63,15 +65,16 @@ end
 demo app 选择 YES
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&quot;updating-your-pods-metadata&quot;&gt;2、Updating Your Pod’s Metadata&lt;/h3&gt;
+&lt;h3&gt;2、Updating Your Pod&#39;s Metadata&lt;/h3&gt;
 
 &lt;p&gt;three file&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;.podspec&lt;/strong&gt;: version，author，homepage&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;README&lt;/strong&gt;: some introduce of you project&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;LICENSE&lt;/strong&gt;:MIT&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;.podspec&lt;/strong&gt;: version，author，homepage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;README&lt;/strong&gt;: some introduce of you project&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LICENSE&lt;/strong&gt;:MIT&lt;/li&gt;
 &lt;/ul&gt;
+
 
 &lt;p&gt;under  &lt;strong&gt;BlinkingLabel/Podspec Metadata/BlinkingLabel.podspec&lt;/strong&gt; find  &lt;strong&gt;.podspec&lt;/strong&gt; 。&lt;/p&gt;
 
@@ -86,7 +89,7 @@ demo app 选择 YES
 - WARN  | The summary is not meaningful.
 - WARN  | The description is not meaningful.
 - WARN  | There was a problem validating the URL      https://github.com/&amp;lt;GITHUB_USERNAME&amp;gt;/BlinkingLabel.
- 
+
 [!] BlinkingLabel did not pass validation.
     You can use the `--no-clean` option to inspect   any issue.
 &lt;/code&gt;&lt;/pre&gt;
@@ -94,10 +97,11 @@ demo app 选择 YES
 &lt;p&gt;some recommend value&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;s.summary:&lt;/strong&gt; A subclass on UILabel that provides a blink.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;s.description:&lt;/strong&gt; This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;s.homepage:&lt;/strong&gt; https://github.com/obuseme/BlinkingLabel (replace obuseme with your GitHub username)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;s.summary:&lt;/strong&gt; A subclass on UILabel that provides a blink.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;s.description:&lt;/strong&gt; This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;s.homepage:&lt;/strong&gt; https://github.com/obuseme/BlinkingLabel (replace obuseme with your GitHub username)&lt;/li&gt;
 &lt;/ul&gt;
+
 
 &lt;p&gt;but  no github repo，goto github new &lt;strong&gt;Repository&lt;/strong&gt; call &lt;strong&gt;BlinkingLabel&lt;/strong&gt;&lt;/p&gt;
 
@@ -115,13 +119,14 @@ git push -u origin master
 &lt;p&gt;output&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;gt; pod lib lint BlinkingLabel.podspec                                
- 
+
 -&amp;gt; BlinkingLabel (0.1.0)
- 
+
 BlinkingLabel passed validation.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&quot;add-code&quot;&gt;3、Add code&lt;/h3&gt;
+&lt;h3&gt;3、Add code&lt;/h3&gt;
+
 &lt;p&gt;under  &lt;strong&gt;Pods/Development Pods/BlinkingLabel/Pod/Classes/&lt;/strong&gt; delete &lt;strong&gt;ReplaceMe.swift&lt;/strong&gt; ,create &lt;strong&gt;BlinkingLabel.swift&lt;/strong&gt;, input&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;public class BlinkingLabel : UILabel {
@@ -131,7 +136,7 @@ public func startBlinking() {
         self.alpha = 0
         }, completion: nil)
 }
- 
+
 public func stopBlinking() {
     alpha = 1
     layer.removeAllAnimations()
@@ -143,22 +148,22 @@ public func stopBlinking() {
 
 &lt;pre&gt;&lt;code&gt;import UIKit
 import BlinkingLabel
- 
+
 class ViewController: UIViewController {
- 
+
 var isBlinking = false
 let blinkingLabel = BlinkingLabel(frame: CGRectMake(10, 20, 200, 30))
- 
+
 override func viewDidLoad() {
     super.viewDidLoad()
- 
+
     // Setup the BlinkingLabel
     blinkingLabel.text = &quot;I blink!&quot;
     blinkingLabel.font = UIFont.systemFontOfSize(20)
     view.addSubview(blinkingLabel)
     blinkingLabel.startBlinking()
     isBlinking = true
- 
+
     // Create a UIButton to toggle the blinking
     let toggleButton = UIButton(frame: CGRectMake(10, 60, 125, 30))
     toggleButton.setTitle(&quot;Toggle Blinking&quot;, forState: .Normal)
@@ -166,7 +171,7 @@ override func viewDidLoad() {
     toggleButton.addTarget(self, action: &quot;toggleBlinking&quot;, forControlEvents: .TouchUpInside)
     view.addSubview(toggleButton)
 }
- 
+
 func toggleBlinking() {
     if (isBlinking) {
         blinkingLabel.stopBlinking()
@@ -192,9 +197,9 @@ Integrating client project
 
 &lt;p&gt;run Example project&lt;/p&gt;
 
-&lt;h3 id=&quot;upload-pod&quot;&gt;4、upload Pod&lt;/h3&gt;
+&lt;h3&gt;4、upload Pod&lt;/h3&gt;
 
-&lt;h4 id=&quot;add-tag&quot;&gt;1、Add Tag&lt;/h4&gt;
+&lt;h4&gt;1、Add Tag&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;gt; git tag 0.1.0
 &amp;gt; git push origin 0.1.0
@@ -203,33 +208,36 @@ To https://github.com/obuseme/BlinkingLabel.git
 [new tag]         0.1.0 -&amp;gt; 0.1.0
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;warning： Tag be same with s.version of .podspec&lt;/p&gt;
+&lt;p&gt;  warning： Tag be same with s.version of .podspec&lt;/p&gt;
 
-&lt;h4 id=&quot;valiate&quot;&gt;2、valiate&lt;/h4&gt;
+&lt;h4&gt;2、valiate&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;pod spec lint BlinkingLabel.podspec
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;output：&lt;/p&gt;
+&lt;p&gt;  output：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  &amp;gt; pod spec lint BlinkingLabel.podspec 
  -&amp;gt; BlinkingLabel (0.1.0)
  Analyzed 1 podspec.
- BlinkingLabel.podspec passed validation. #### 3、push pod to **Specs Repository**
-
-pod trunk push BlinkingLabel.podspec
+ BlinkingLabel.podspec passed validation.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;output：&lt;/p&gt;
+&lt;h4&gt;3、push pod to &lt;strong&gt;Specs Repository&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;pod trunk push BlinkingLabel.podspec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt; output：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt; &amp;gt; pod trunk push BlinkingLabel.podspec 
  Updating spec repo `master`
- 
+
  Validating podspec
  -&amp;gt; BlinkingLabel (0.1.0)
- 
+
 Updating spec repo `master`
- 
+
  - Data URL: https://raw.githubusercontent.com/CocoaPods/Specs/f7fb546c4b0f80cab93513fc228b274be6459ad2/Specs/BlinkingLabel/0.1.0/BlinkingLabel.podspec.json
  - Log messages:
 - June 29th, 20:40: Push for `BlinkingLabel 0.1.0&#39; initiated.
@@ -237,7 +245,6 @@ Updating spec repo `master`
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;All done&lt;/p&gt;
-
 </description>
         <pubDate>Tue, 29 Mar 2016 11:00:08 +0800</pubDate>
         <link>http://zhangxiaolian.com/cocoapods-use-and-create/</link>
@@ -264,8 +271,8 @@ Updating spec repo `master`
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
 
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sat, 08 Aug 2015 11:00:08 +0800</pubDate>
         <link>http://zhangxiaolian.com/welcome-to-jekyll/</link>
@@ -311,24 +318,48 @@ Updating spec repo `master`
         <title>Lorem ipsum dolor sit amet</title>
         <description>&lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, &lt;code&gt;commodo vitae&lt;/code&gt;, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis. Ut felis.&lt;/p&gt;
 
+
+
+
 &lt;h1&gt;Header Level 1&lt;/h1&gt;
+
+
 &lt;h2&gt;Header Level 2&lt;/h2&gt;
 
+
+
+
 &lt;p&gt;Unordered list&lt;/p&gt;
+
+
 &lt;ol&gt;
   &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
   &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
 &lt;/ol&gt;
 
+
+
+
 &lt;blockquote&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.&lt;/p&gt;&lt;/blockquote&gt;
+
+
+
 
 &lt;h3&gt;Header Level 3&lt;/h3&gt;
 
+
+
+
 &lt;p&gt;Ordered list&lt;/p&gt;
+
+
 &lt;ul&gt;
   &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
   &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
 &lt;/ul&gt;
+
+
+
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#header&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -336,9 +367,17 @@ Updating spec repo `master`
   &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+
+
+
 &lt;h4&gt;Header Level 4&lt;/h4&gt;
+
+
 &lt;h5&gt;Header Level 5&lt;/h5&gt;
+
+
 &lt;h6&gt;Header Level 6&lt;/h6&gt;
+
 </description>
         <pubDate>Fri, 07 Aug 2015 11:00:08 +0800</pubDate>
         <link>http://zhangxiaolian.com/lorem/</link>
@@ -355,11 +394,11 @@ Updating spec repo `master`
 
 &lt;p&gt;Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex.&lt;/p&gt;
 
-&lt;p&gt;Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs! “Now fax quiz Jack! “ my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk.&lt;/p&gt;
+&lt;p&gt;Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs! &quot;Now fax quiz Jack! &quot; my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk.&lt;/p&gt;
 
 &lt;p&gt;A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump.&lt;/p&gt;
 
-&lt;p&gt;Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog. Watch “Jeopardy! “, Alex Trebek’s fun TV quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny gods just flocked up to quiz and vex him.&lt;/p&gt;
+&lt;p&gt;Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog. Watch &quot;Jeopardy! &quot;, Alex Trebek&#39;s fun TV quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny gods just flocked up to quiz and vex him.&lt;/p&gt;
 
 &lt;p&gt;Adjusting quiver and bow, Zompyc[1] killed the fox. My faxed joke won a pager in the cable TV quiz show. Amazingly few discotheques provide jukeboxes. My girl wove six dozen plaid jackets before she quit. Six big devils from Japan quickly forgot how to waltz.&lt;/p&gt;
 
@@ -371,7 +410,7 @@ Updating spec repo `master`
 
 &lt;p&gt;Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs!&lt;/p&gt;
 
-&lt;p&gt;“Now fax quiz Jack! “ my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV&lt;/p&gt;
+&lt;p&gt;&quot;Now fax quiz Jack! &quot; my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV&lt;/p&gt;
 </description>
         <pubDate>Thu, 06 Aug 2015 11:00:08 +0800</pubDate>
         <link>http://zhangxiaolian.com/the-quick-brown-fox/</link>
@@ -392,7 +431,7 @@ Updating spec repo `master`
 
 &lt;p&gt;When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath of that universal love which bears and sustains us, as it floats around us in an eternity of bliss; and then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing, Oh, would I could describe these conceptions, could impress upon paper all that is living so full and warm within me, that it might be the mirror of my soul, as my soul is the mirror of the infinite God!&lt;/p&gt;
 
-&lt;p&gt;O my friend – but it is too much for my strength – I sink under the weight of the splendour of these visions!&lt;/p&gt;
+&lt;p&gt;O my friend -- but it is too much for my strength -- I sink under the weight of the splendour of these visions!&lt;/p&gt;
 
 &lt;p&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.&lt;/p&gt;
 
@@ -427,7 +466,7 @@ Updating spec repo `master`
 
 &lt;p&gt;Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.&lt;/p&gt;
 
-&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word “and” and the Little Blind Text should turn around and return to its own, safe country.&lt;/p&gt;
+&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word &quot;and&quot; and the Little Blind Text should turn around and return to its own, safe country.&lt;/p&gt;
 
 &lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again. And if she hasn’t been rewritten, then they are still using her.&lt;/p&gt;
 
