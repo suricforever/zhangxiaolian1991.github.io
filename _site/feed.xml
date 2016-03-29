@@ -5,9 +5,250 @@
     <description>Suric</description>
     <link>http://zhangxiaolian.com/</link>
     <atom:link href="http://zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Mar 2016 16:06:03 +0800</pubDate>
-    <lastBuildDate>Tue, 29 Mar 2016 16:06:03 +0800</lastBuildDate>
+    <pubDate>Tue, 29 Mar 2016 16:41:57 +0800</pubDate>
+    <lastBuildDate>Tue, 29 Mar 2016 16:41:57 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>cocoapods use and create</title>
+        <description>&lt;h3 id=&quot;install&quot;&gt;Install&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo gem install cocoapods
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;init&quot;&gt;Init&lt;/h3&gt;
+&lt;p&gt;Enter project directory&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;find Podfile，enter&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;platform :ios, &#39;8.0&#39;
+use_frameworks!
+
+target &#39;MyApp&#39; do
+  pod &#39;AFNetworking&#39;, &#39;~&amp;gt; 2.6&#39;
+  pod &#39;ORStackView&#39;, &#39;~&amp;gt; 3.0&#39;
+  pod &#39;SwiftyJSON&#39;, &#39;~&amp;gt; 2.3&#39;
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Enter project directory&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ open App.xcworkspace
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;import&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#import &amp;lt;Reachability/Reachability.h&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;publish-cocoapod&quot;&gt;Publish cocoapod&lt;/h1&gt;
+
+&lt;h3 id=&quot;create-the-project&quot;&gt;1、Create the Project&lt;/h3&gt;
+&lt;p&gt;under your work directory（demo as &lt;strong&gt;BlinkingLabel&lt;/strong&gt; )&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod lib create BlinkingLabel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;need answer some question&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;language swift 
+demo app 选择 YES
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;updating-your-pods-metadata&quot;&gt;2、Updating Your Pod’s Metadata&lt;/h3&gt;
+
+&lt;p&gt;three file&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;.podspec&lt;/strong&gt;: version，author，homepage&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;README&lt;/strong&gt;: some introduce of you project&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;LICENSE&lt;/strong&gt;:MIT&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;under  &lt;strong&gt;BlinkingLabel/Podspec Metadata/BlinkingLabel.podspec&lt;/strong&gt; find  &lt;strong&gt;.podspec&lt;/strong&gt; 。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod lib lint BlinkingLabel.podspec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;check &lt;strong&gt;.podspec&lt;/strong&gt;，will warning&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; pod lib lint BlinkingLabel.podspec
+
+-&amp;gt; BlinkingLabel (0.1.0)
+- WARN  | The summary is not meaningful.
+- WARN  | The description is not meaningful.
+- WARN  | There was a problem validating the URL      https://github.com/&amp;lt;GITHUB_USERNAME&amp;gt;/BlinkingLabel.
+ 
+[!] BlinkingLabel did not pass validation.
+    You can use the `--no-clean` option to inspect   any issue.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;some recommend value&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;s.summary:&lt;/strong&gt; A subclass on UILabel that provides a blink.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;s.description:&lt;/strong&gt; This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;s.homepage:&lt;/strong&gt; https://github.com/obuseme/BlinkingLabel (replace obuseme with your GitHub username)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;but  no github repo，goto github new &lt;strong&gt;Repository&lt;/strong&gt; call &lt;strong&gt;BlinkingLabel&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git add .
+git commit -m “Initial Commit&quot;
+git remote add origin https://github.com/  &amp;lt;GITHUB_USERNAME&amp;gt;/BlinkingLabel.git // replace &amp;lt;GITHUB_USERNAME&amp;gt; with your github.com username
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;execute&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pod lib lint BlinkingLabel.podspec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;output&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; pod lib lint BlinkingLabel.podspec                                
+ 
+-&amp;gt; BlinkingLabel (0.1.0)
+ 
+BlinkingLabel passed validation.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;add-code&quot;&gt;3、Add code&lt;/h3&gt;
+&lt;p&gt;under  &lt;strong&gt;Pods/Development Pods/BlinkingLabel/Pod/Classes/&lt;/strong&gt; delete &lt;strong&gt;ReplaceMe.swift&lt;/strong&gt; ,create &lt;strong&gt;BlinkingLabel.swift&lt;/strong&gt;, input&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class BlinkingLabel : UILabel {
+public func startBlinking() {
+    let options : UIViewAnimationOptions = ［.Repeat,.Autoreverse]
+    UIView.animateWithDuration(0.25, delay:0.0, options:options, animations: {
+        self.alpha = 0
+        }, completion: nil)
+}
+ 
+public func stopBlinking() {
+    alpha = 1
+    layer.removeAllAnimations()
+}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;open &lt;strong&gt;BlinkingLabel/Example for BlinkingLabel/ViewController.swift&lt;/strong&gt; ,input&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import UIKit
+import BlinkingLabel
+ 
+class ViewController: UIViewController {
+ 
+var isBlinking = false
+let blinkingLabel = BlinkingLabel(frame: CGRectMake(10, 20, 200, 30))
+ 
+override func viewDidLoad() {
+    super.viewDidLoad()
+ 
+    // Setup the BlinkingLabel
+    blinkingLabel.text = &quot;I blink!&quot;
+    blinkingLabel.font = UIFont.systemFontOfSize(20)
+    view.addSubview(blinkingLabel)
+    blinkingLabel.startBlinking()
+    isBlinking = true
+ 
+    // Create a UIButton to toggle the blinking
+    let toggleButton = UIButton(frame: CGRectMake(10, 60, 125, 30))
+    toggleButton.setTitle(&quot;Toggle Blinking&quot;, forState: .Normal)
+    toggleButton.setTitleColor(UIColor.redColor(), forState: .Normal)
+    toggleButton.addTarget(self, action: &quot;toggleBlinking&quot;, forControlEvents: .TouchUpInside)
+    view.addSubview(toggleButton)
+}
+ 
+func toggleBlinking() {
+    if (isBlinking) {
+        blinkingLabel.stopBlinking()
+    } else {
+        blinkingLabel.startBlinking()
+    }
+    isBlinking = !isBlinking
+}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;enter Example， pod install&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cd Example 
+&amp;gt; pod install
+Analyzing dependencies
+Fetching podspec for `BlinkingLabel` from `../`
+Downloading dependencies
+Installing BlinkingLabel 0.1.0 (was 0.1.0)
+Generating Pods project
+Integrating client project  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;run Example project&lt;/p&gt;
+
+&lt;h3 id=&quot;upload-pod&quot;&gt;4、upload Pod&lt;/h3&gt;
+
+&lt;h4 id=&quot;add-tag&quot;&gt;1、Add Tag&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; git tag 0.1.0
+&amp;gt; git push origin 0.1.0
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/obuseme/BlinkingLabel.git
+[new tag]         0.1.0 -&amp;gt; 0.1.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;warning： Tag be same with s.version of .podspec&lt;/p&gt;
+
+&lt;h4 id=&quot;valiate&quot;&gt;2、valiate&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;pod spec lint BlinkingLabel.podspec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;output：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;gt; pod spec lint BlinkingLabel.podspec 
+ -&amp;gt; BlinkingLabel (0.1.0)
+ Analyzed 1 podspec.
+ BlinkingLabel.podspec passed validation. #### 3、push pod to **Specs Repository**
+
+pod trunk push BlinkingLabel.podspec
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;output：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; &amp;gt; pod trunk push BlinkingLabel.podspec 
+ Updating spec repo `master`
+ 
+ Validating podspec
+ -&amp;gt; BlinkingLabel (0.1.0)
+ 
+Updating spec repo `master`
+ 
+ - Data URL: https://raw.githubusercontent.com/CocoaPods/Specs/f7fb546c4b0f80cab93513fc228b274be6459ad2/Specs/BlinkingLabel/0.1.0/BlinkingLabel.podspec.json
+ - Log messages:
+- June 29th, 20:40: Push for `BlinkingLabel 0.1.0&#39; initiated.
+- June 29th, 20:40: Push for `BlinkingLabel 0.1.0&#39; has been pushed (1.701885099 s).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All done&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 29 Mar 2016 11:00:08 +0800</pubDate>
+        <link>http://zhangxiaolian.com/cocoapods-use-and-create/</link>
+        <guid isPermaLink="true">http://zhangxiaolian.com/cocoapods-use-and-create/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>
