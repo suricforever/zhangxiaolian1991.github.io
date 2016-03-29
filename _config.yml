@@ -1,0 +1,28 @@
+# Site settings
+title: 张晓连的Blog
+email: zhangxiaolian1991@gmail.com
+description: Suric
+baseurl: "/zhangxiaolian"
+url: "http://zhangxiaolian.com"
+
+author:
+  name     : Suric Zhang
+  email    : zhangxiaolian1991@gmail.com
+  url      : http://zhangxiaolian.com/
+  twitter  : https://twitter.com/SuricZhang
+
+github: https://github.com/zhangxiaolian1991
+disqus_shortname: "fernandomoreira"
+google_analytics: UA-52446115-1
+
+paginate: 2
+comments: true
+paginate_path: "/page/:num"
+
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+# Build settings
+markdown  : kramdown
+permalink : /:title/
