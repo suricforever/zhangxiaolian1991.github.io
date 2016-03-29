@@ -3,7 +3,7 @@ layout: post
 title:  "cocoapods use and create"
 date:   2016-03-29 03:00:08
 categories: jekyll update
-comments: true
+comments: false
 ---
 ### Install
     
