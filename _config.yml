@@ -24,5 +24,4 @@ sass:
   sass_dir: _sass
 
 # Build settings
-markdown  : rdiscount
 permalink : /:title/
