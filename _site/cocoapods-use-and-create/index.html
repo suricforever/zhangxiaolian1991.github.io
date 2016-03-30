@@ -1,118 +1,98 @@
-<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title> cocoapods use and create &bull; 张晓连的Blog </title> <meta name="description" content="Installsudo gem install cocoapods"> <link rel="stylesheet" href="/css/main.css"> <link rel="canonical" href="http://zhangxiaolian.com/cocoapods-use-and-create/"> <link rel="alternate" type="application/rss+xml" title="张晓连的Blog" href="http://zhangxiaolian.com/feed.xml" /> <script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-52446115-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script> <meta name="robots" content="noindex"> <!--===== Please remove it ! ! ! ======--> <meta name="googlebot" content="noindex"> <!--===== Please remove it ! ! ! ======--> </head> <body class="single"> <main class="main"> <header class="header"> <div class="overlay"> <div class="container"> <h1 class="title"> <a href="/">张晓连的Blog</a> <small></small> </h1> <nav class="navbar"> <a href="#" class="menu-icon"> <span></span> <span></span> <span></span> </a> <ul class="nav"> <li><a href="/about/">About</a></li> <li><a href="http://zhangxiaolian.com//about" target="_blank">the autor</a></li> <li><a href="https://github.com/zhangxiaolian1991" target="_blank">Github</a></li> </ul> </nav> </div> </div> </header> <article class="post container card"> <header class="post-header"> <h1 class="post-title">cocoapods use and create</h1> <span class="post-meta"> <time class="post-date" datetime="2016-03-29">Mar 29, 2016</time> <span class="post-author">by Suric Zhang</span> </span> </header> <div class="post-content"> <h3 id="install">Install</h3> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span></code></pre></div> <h3 id="init">Init</h3> <p>Enter project directory</p> <p><code>ruby pod init </code></p> <p>find Podfile，enter</p><pre><code>platform :ios, '8.0'
-use_frameworks!
+<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title> cocoapods use and create &bull; 张晓连的Blog </title> <meta name="description" content="Installsudo gem install cocoapods"> <link rel="stylesheet" href="/css/main.css"> <link rel="canonical" href="http://zhangxiaolian.com/cocoapods-use-and-create/"> <link rel="alternate" type="application/rss+xml" title="张晓连的Blog" href="http://zhangxiaolian.com/feed.xml" /> <script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-52446115-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); </script> <meta name="robots" content="noindex"> <!--===== Please remove it ! ! ! ======--> <meta name="googlebot" content="noindex"> <!--===== Please remove it ! ! ! ======--> </head> <body class="single"> <main class="main"> <header class="header"> <div class="overlay"> <div class="container"> <h1 class="title"> <a href="/">张晓连的Blog</a> <small></small> </h1> <nav class="navbar"> <a href="#" class="menu-icon"> <span></span> <span></span> <span></span> </a> <ul class="nav"> <li><a href="/about/">About</a></li> <li><a href="http://zhangxiaolian.com//about" target="_blank">the autor</a></li> <li><a href="https://github.com/zhangxiaolian1991" target="_blank">Github</a></li> </ul> </nav> </div> </div> </header> <article class="post container card"> <header class="post-header"> <h1 class="post-title">cocoapods use and create</h1> <span class="post-meta"> <time class="post-date" datetime="2016-03-29">Mar 29, 2016</time> <span class="post-author">by Suric Zhang</span> </span> </header> <div class="post-content"> <h3 id="install">Install</h3> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span></code></pre></div> <h3 id="init">Init</h3> <p>Enter project directory</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">pod</span> <span class="n">init</span></code></pre></div> <p>find Podfile，enter</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">&#39;8.0&#39;</span>
+    <span class="n">use_frameworks!</span>
 
-target 'MyApp' do
-  pod 'AFNetworking', '~&gt; 2.6'
-  pod 'ORStackView', '~&gt; 3.0'
-  pod 'SwiftyJSON', '~&gt; 2.3'
-end
-</code></pre><p>Enter project directory</p><pre><code>pod install
-</code></pre><p>then</p><pre><code>$ open App.xcworkspace
-</code></pre><p>import</p><pre><code>#import &lt;Reachability/Reachability.h&gt;
-</code></pre><h1 id="publish-cocoapod">Publish cocoapod</h1> <h3 id="create-the-project">1、Create the Project</h3> <p>under your work directory（demo as <strong>BlinkingLabel</strong> )</p><pre><code>pod lib create BlinkingLabel
-</code></pre><p>need answer some question</p><pre><code>language swift 
-demo app 选择 YES
-</code></pre><h3 id="updating-your-pods-metadata">2、Updating Your Pod’s Metadata</h3> <p>three file</p> <ul> <li><strong>.podspec</strong>: version，author，homepage</li> <li><strong>README</strong>: some introduce of you project</li> <li><strong>LICENSE</strong>:MIT</li> </ul> <p>under <strong>BlinkingLabel/Podspec Metadata/BlinkingLabel.podspec</strong> find <strong>.podspec</strong> 。</p><pre><code>pod lib lint BlinkingLabel.podspec
-</code></pre><p>check <strong>.podspec</strong>，will warning</p><pre><code>&gt; pod lib lint BlinkingLabel.podspec
-
--&gt; BlinkingLabel (0.1.0)
-- WARN  | The summary is not meaningful.
-- WARN  | The description is not meaningful.
-- WARN  | There was a problem validating the URL      https://github.com/&lt;GITHUB_USERNAME&gt;/BlinkingLabel.
+    <span class="n">target</span> <span class="s1">&#39;MyApp&#39;</span> <span class="k">do</span>
+      <span class="n">pod</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.6&#39;</span>
+      <span class="n">pod</span> <span class="s1">&#39;ORStackView&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.0&#39;</span>
+      <span class="n">pod</span> <span class="s1">&#39;SwiftyJSON&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.3&#39;</span>
+    <span class="k">end</span></code></pre></div> <p>Enter project directory</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">pod</span> <span class="n">install</span></code></pre></div> <p>then</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="nb">open</span> <span class="no">App</span><span class="o">.</span><span class="n">xcworkspace</span></code></pre></div> <p>import</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1">#import &lt;Reachability/Reachability.h&gt;</span></code></pre></div> <h1 id="publish-cocoapod">Publish cocoapod</h1> <h3 id="create-the-project">1、Create the Project</h3> <p>under your work directory（demo as <strong>BlinkingLabel</strong> )</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">pod</span> <span class="n">lib</span> <span class="n">create</span> <span class="no">BlinkingLabel</span></code></pre></div> <p>need answer some question</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">language</span> <span class="n">choose</span> <span class="n">swift</span> 
+    <span class="n">demo</span> <span class="n">app</span> <span class="n">choose</span> <span class="no">YES</span></code></pre></div> <h3 id="updating-your-pods-metadata">2、Updating Your Pod’s Metadata</h3> <p>three file</p> <ul> <li><strong>.podspec</strong>: version，author，homepage</li> <li><strong>README</strong>: some introduce of you project</li> <li><strong>LICENSE</strong>:MIT</li> </ul> <p>under <strong>BlinkingLabel/Podspec Metadata/BlinkingLabel.podspec</strong> find <strong>.podspec</strong> 。</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">pod</span> <span class="n">lib</span> <span class="n">lint</span> <span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">podspec</span></code></pre></div> <p>check <strong>.podspec</strong>，will warning</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">pod</span> <span class="n">lib</span> <span class="n">lint</span> <span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">podspec</span>
+    
+    <span class="o">-&gt;</span> <span class="no">BlinkingLabel</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+    <span class="o">-</span> <span class="no">WARN</span>  <span class="o">|</span> <span class="no">The</span> <span class="n">summary</span> <span class="n">is</span> <span class="ow">not</span> <span class="n">meaningful</span><span class="o">.</span>
+    <span class="o">-</span> <span class="no">WARN</span>  <span class="o">|</span> <span class="no">The</span> <span class="n">description</span> <span class="n">is</span> <span class="ow">not</span> <span class="n">meaningful</span><span class="o">.</span>
+    <span class="o">-</span> <span class="no">WARN</span>  <span class="o">|</span> <span class="no">There</span> <span class="n">was</span> <span class="n">a</span> <span class="n">problem</span> <span class="n">validating</span> <span class="n">the</span> <span class="no">URL</span>      <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/&lt;</span><span class="no">GITHUB_USERNAME</span><span class="o">&gt;</span><span class="sr">/BlinkingLabel.</span>
+<span class="sr"> </span>
+<span class="sr">    [!] BlinkingLabel did not pass validation.</span>
+<span class="sr">        You can use the `--no-clean` option to inspect   any issue.</span></code></pre></div> <p>some recommend value</p> <ul> <li><strong>s.summary:</strong> A subclass on UILabel that provides a blink.</li> <li><strong>s.description:</strong> This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.</li> <li><strong>s.homepage:</strong> https://github.com/obuseme/BlinkingLabel (replace obuseme with your GitHub username)</li> </ul> <p>but no github repo，goto github new <strong>Repository</strong> call <strong>BlinkingLabel</strong></p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+    <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Initial Commit&quot;</span>
+    <span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span>  <span class="o">&lt;</span><span class="no">GITHUB_USERNAME</span><span class="o">&gt;</span><span class="sr">/BlinkingLabel.git /</span><span class="o">/</span> <span class="n">replace</span> <span class="o">&lt;</span><span class="no">GITHUB_USERNAME</span><span class="o">&gt;</span> <span class="n">with</span> <span class="n">your</span> <span class="n">github</span><span class="o">.</span><span class="n">com</span> <span class="n">username</span>
+    <span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span></code></pre></div> <p>execute</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">pod</span> <span class="n">lib</span> <span class="n">lint</span> <span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">podspec</span></code></pre></div> <p>output</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">pod</span> <span class="n">lib</span> <span class="n">lint</span> <span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">podspec</span>                                
  
-[!] BlinkingLabel did not pass validation.
-    You can use the `--no-clean` option to inspect   any issue.
-</code></pre><p>some recommend value</p> <ul> <li><strong>s.summary:</strong> A subclass on UILabel that provides a blink.</li> <li><strong>s.description:</strong> This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.</li> <li><strong>s.homepage:</strong> https://github.com/obuseme/BlinkingLabel (replace obuseme with your GitHub username)</li> </ul> <p>but no github repo，goto github new <strong>Repository</strong> call <strong>BlinkingLabel</strong></p><pre><code>git add .
-git commit -m “Initial Commit"
-git remote add origin https://github.com/  &lt;GITHUB_USERNAME&gt;/BlinkingLabel.git // replace &lt;GITHUB_USERNAME&gt; with your github.com username
-git push -u origin master
-</code></pre><p>execute</p><pre><code>pod lib lint BlinkingLabel.podspec
-</code></pre><p>output</p><pre><code>&gt; pod lib lint BlinkingLabel.podspec                                
+    <span class="o">-&gt;</span> <span class="no">BlinkingLabel</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
  
--&gt; BlinkingLabel (0.1.0)
+    <span class="no">BlinkingLabel</span> <span class="n">passed</span> <span class="n">validation</span><span class="o">.</span></code></pre></div> <h3 id="add-code">3、Add code</h3> <p>under <strong>Pods/Development Pods/BlinkingLabel/Pod/Classes/</strong> delete <strong>ReplaceMe.swift</strong> ,create <strong>BlinkingLabel.swift</strong>, input</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="kp">public</span> <span class="k">class</span> <span class="nc">BlinkingLabel</span> <span class="p">:</span> <span class="no">UILabel</span> <span class="p">{</span>
+    <span class="kp">public</span> <span class="n">func</span> <span class="n">startBlinking</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">let</span> <span class="n">options</span> <span class="p">:</span> <span class="no">UIViewAnimationOptions</span> <span class="o">=</span> <span class="err">［</span><span class="o">.</span><span class="n">Repeat</span><span class="p">,</span><span class="o">.</span><span class="n">Autoreverse</span><span class="o">]</span>
+        <span class="no">UIView</span><span class="o">.</span><span class="n">animateWithDuration</span><span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">25</span><span class="p">,</span> <span class="ss">delay</span><span class="p">:</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="ss">options</span><span class="p">:</span><span class="n">options</span><span class="p">,</span> <span class="ss">animations</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nb">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="p">},</span> <span class="ss">completion</span><span class="p">:</span> <span class="kp">nil</span><span class="p">)</span>
+    <span class="p">}</span>
  
-BlinkingLabel passed validation.
-</code></pre><h3 id="add-code">3、Add code</h3> <p>under <strong>Pods/Development Pods/BlinkingLabel/Pod/Classes/</strong> delete <strong>ReplaceMe.swift</strong> ,create <strong>BlinkingLabel.swift</strong>, input</p><pre><code>public class BlinkingLabel : UILabel {
-public func startBlinking() {
-    let options : UIViewAnimationOptions = ［.Repeat,.Autoreverse]
-    UIView.animateWithDuration(0.25, delay:0.0, options:options, animations: {
-        self.alpha = 0
-        }, completion: nil)
-}
+    <span class="kp">public</span> <span class="n">func</span> <span class="n">stopBlinking</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">layer</span><span class="o">.</span><span class="n">removeAllAnimations</span><span class="p">()</span>
+    <span class="p">}</span>
+    <span class="p">}</span></code></pre></div> <p>open <strong>BlinkingLabel/Example for BlinkingLabel/ViewController.swift</strong> ,input</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">import</span> <span class="no">UIKit</span>
+    <span class="n">import</span> <span class="no">BlinkingLabel</span>
  
-public func stopBlinking() {
-    alpha = 1
-    layer.removeAllAnimations()
-}
-}
-</code></pre><p>open <strong>BlinkingLabel/Example for BlinkingLabel/ViewController.swift</strong> ,input</p><pre><code>import UIKit
-import BlinkingLabel
+    <span class="k">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="no">UIViewController</span> <span class="p">{</span>
  
-class ViewController: UIViewController {
+    <span class="n">var</span> <span class="n">isBlinking</span> <span class="o">=</span> <span class="kp">false</span>
+    <span class="n">let</span> <span class="n">blinkingLabel</span> <span class="o">=</span> <span class="no">BlinkingLabel</span><span class="p">(</span><span class="ss">frame</span><span class="p">:</span> <span class="no">CGRectMake</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
  
-var isBlinking = false
-let blinkingLabel = BlinkingLabel(frame: CGRectMake(10, 20, 200, 30))
+    <span class="n">override</span> <span class="n">func</span> <span class="n">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
  
-override func viewDidLoad() {
-    super.viewDidLoad()
+        <span class="sr">//</span> <span class="no">Setup</span> <span class="n">the</span> <span class="no">BlinkingLabel</span>
+        <span class="n">blinkingLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;I blink!&quot;</span>
+        <span class="n">blinkingLabel</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="no">UIFont</span><span class="o">.</span><span class="n">systemFontOfSize</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">blinkingLabel</span><span class="p">)</span>
+        <span class="n">blinkingLabel</span><span class="o">.</span><span class="n">startBlinking</span><span class="p">()</span>
+        <span class="n">isBlinking</span> <span class="o">=</span> <span class="kp">true</span>
  
-    // Setup the BlinkingLabel
-    blinkingLabel.text = "I blink!"
-    blinkingLabel.font = UIFont.systemFontOfSize(20)
-    view.addSubview(blinkingLabel)
-    blinkingLabel.startBlinking()
-    isBlinking = true
+        <span class="sr">//</span> <span class="no">Create</span> <span class="n">a</span> <span class="no">UIButton</span> <span class="n">to</span> <span class="n">toggle</span> <span class="n">the</span> <span class="n">blinking</span>
+        <span class="n">let</span> <span class="n">toggleButton</span> <span class="o">=</span> <span class="no">UIButton</span><span class="p">(</span><span class="ss">frame</span><span class="p">:</span> <span class="no">CGRectMake</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+        <span class="n">toggleButton</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="s2">&quot;Toggle Blinking&quot;</span><span class="p">,</span> <span class="ss">forState</span><span class="p">:</span> <span class="o">.</span><span class="n">Normal</span><span class="p">)</span>
+        <span class="n">toggleButton</span><span class="o">.</span><span class="n">setTitleColor</span><span class="p">(</span><span class="no">UIColor</span><span class="o">.</span><span class="n">redColor</span><span class="p">(),</span> <span class="ss">forState</span><span class="p">:</span> <span class="o">.</span><span class="n">Normal</span><span class="p">)</span>
+        <span class="n">toggleButton</span><span class="o">.</span><span class="n">addTarget</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">action</span><span class="p">:</span> <span class="s2">&quot;toggleBlinking&quot;</span><span class="p">,</span> <span class="ss">forControlEvents</span><span class="p">:</span> <span class="o">.</span><span class="n">TouchUpInside</span><span class="p">)</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">toggleButton</span><span class="p">)</span>
+    <span class="p">}</span>
  
-    // Create a UIButton to toggle the blinking
-    let toggleButton = UIButton(frame: CGRectMake(10, 60, 125, 30))
-    toggleButton.setTitle("Toggle Blinking", forState: .Normal)
-    toggleButton.setTitleColor(UIColor.redColor(), forState: .Normal)
-    toggleButton.addTarget(self, action: "toggleBlinking", forControlEvents: .TouchUpInside)
-    view.addSubview(toggleButton)
-}
+    <span class="n">func</span> <span class="n">toggleBlinking</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">isBlinking</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">blinkingLabel</span><span class="o">.</span><span class="n">stopBlinking</span><span class="p">()</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">blinkingLabel</span><span class="o">.</span><span class="n">startBlinking</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="n">isBlinking</span> <span class="o">=</span> <span class="o">!</span><span class="n">isBlinking</span>
+    <span class="p">}</span>
+    <span class="p">}</span></code></pre></div> <p>enter Example， pod install</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">cd</span> <span class="no">Example</span> 
+    <span class="o">&gt;</span> <span class="n">pod</span> <span class="n">install</span>
+    <span class="no">Analyzing</span> <span class="n">dependencies</span>
+    <span class="no">Fetching</span> <span class="n">podspec</span> <span class="k">for</span> <span class="sb">`BlinkingLabel`</span> <span class="n">from</span> <span class="sb">`../`</span>
+    <span class="no">Downloading</span> <span class="n">dependencies</span>
+    <span class="no">Installing</span> <span class="no">BlinkingLabel</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">was</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+    <span class="no">Generating</span> <span class="no">Pods</span> <span class="n">project</span>
+    <span class="no">Integrating</span> <span class="n">client</span> <span class="n">project</span></code></pre></div> <p>run Example project</p> <h3 id="upload-pod">4、upload Pod</h3> <h4 id="add-tag">1、Add Tag</h4> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">git</span> <span class="n">tag</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span>
+    <span class="o">&gt;</span> <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span>
+    <span class="no">Total</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="no">To</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">obuseme</span><span class="o">/</span><span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">git</span>
+    <span class="o">[</span><span class="kp">new</span> <span class="n">tag</span><span class="o">]</span>         <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span> <span class="o">-&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span></code></pre></div> <p>warning： Tag be same with s.version of .podspec</p> <h4 id="valiate">2、valiate</h4> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">pod</span> <span class="n">spec</span> <span class="n">lint</span> <span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">podspec</span></code></pre></div> <p>output：</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">pod</span> <span class="n">spec</span> <span class="n">lint</span> <span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">podspec</span> 
+     <span class="o">-&gt;</span> <span class="no">BlinkingLabel</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+     <span class="no">Analyzed</span> <span class="mi">1</span> <span class="n">podspec</span><span class="o">.</span>
+     <span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">podspec</span> <span class="n">passed</span> <span class="n">validation</span><span class="o">.</span></code></pre></div> <h4 id="push-pod-to-specs-repository">3、push pod to <strong>Specs Repository</strong></h4> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">pod</span> <span class="n">trunk</span> <span class="n">push</span> <span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">podspec</span></code></pre></div> <p>output：</p> <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">pod</span> <span class="n">trunk</span> <span class="n">push</span> <span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">podspec</span> 
+     <span class="no">Updating</span> <span class="n">spec</span> <span class="n">repo</span> <span class="sb">`master`</span>
  
-func toggleBlinking() {
-    if (isBlinking) {
-        blinkingLabel.stopBlinking()
-    } else {
-        blinkingLabel.startBlinking()
-    }
-    isBlinking = !isBlinking
-}
-}
-</code></pre><p>enter Example， pod install</p><pre><code>&gt; cd Example 
-&gt; pod install
-Analyzing dependencies
-Fetching podspec for `BlinkingLabel` from `../`
-Downloading dependencies
-Installing BlinkingLabel 0.1.0 (was 0.1.0)
-Generating Pods project
-Integrating client project  
-</code></pre><p>run Example project</p> <h3 id="upload-pod">4、upload Pod</h3> <h4 id="add-tag">1、Add Tag</h4><pre><code>&gt; git tag 0.1.0
-&gt; git push origin 0.1.0
-Total 0 (delta 0), reused 0 (delta 0)
-To https://github.com/obuseme/BlinkingLabel.git
-[new tag]         0.1.0 -&gt; 0.1.0
-</code></pre><p>warning： Tag be same with s.version of .podspec</p> <h4 id="valiate">2、valiate</h4><pre><code>pod spec lint BlinkingLabel.podspec
-</code></pre><p>output：</p><pre><code>  &gt; pod spec lint BlinkingLabel.podspec 
- -&gt; BlinkingLabel (0.1.0)
- Analyzed 1 podspec.
- BlinkingLabel.podspec passed validation. #### 3、push pod to **Specs Repository**
-
-pod trunk push BlinkingLabel.podspec
-</code></pre><p>output：</p><pre><code> &gt; pod trunk push BlinkingLabel.podspec 
- Updating spec repo `master`
+     <span class="no">Validating</span> <span class="n">podspec</span>
+     <span class="o">-&gt;</span> <span class="no">BlinkingLabel</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
  
- Validating podspec
- -&gt; BlinkingLabel (0.1.0)
+    <span class="no">Updating</span> <span class="n">spec</span> <span class="n">repo</span> <span class="sb">`master`</span>
  
-Updating spec repo `master`
- 
- - Data URL: https://raw.githubusercontent.com/CocoaPods/Specs/f7fb546c4b0f80cab93513fc228b274be6459ad2/Specs/BlinkingLabel/0.1.0/BlinkingLabel.podspec.json
- - Log messages:
-- June 29th, 20:40: Push for `BlinkingLabel 0.1.0' initiated.
-- June 29th, 20:40: Push for `BlinkingLabel 0.1.0' has been pushed (1.701885099 s).
-</code></pre><p>All done</p> <aside class="share"> <span>Share this: </span> <a href="http://twitter.com/share?text=cocoapods use and create&amp;url=http://zhangxiaolian.com/cocoapods-use-and-create/&amp;hashtags=web,dev,blog,soudev&amp;via=nandomoreirame" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"> <i class="fa fa-twitter-square"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?u=http://zhangxiaolian.com/cocoapods-use-and-create/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"> <i class="fa fa-facebook-square"></i> </a> </aside> </div> </article> <footer class="footer t-center"> <div class="container"> <div class="social-icons"> <ul class="text-left"> <li><a href="" target="_blank"><i class="fa fa-facebook"></i></a></li> <li><a href="https://twitter.com/SuricZhang" target="_blank"><i class="fa fa-twitter"></i></a></li> </ul> </div> <small>&copy; 2016 All rights reserved. Made with <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and <i class="icon icon-heart"></i></small> <small>by <a href="http://nandomoreira.me" target="_blank">nandomoreira.me</a></small> </div> </footer> </main> </body> </html></body></html>
+     <span class="o">-</span> <span class="no">Data</span> <span class="ss">URL</span><span class="p">:</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="no">CocoaPods</span><span class="o">/</span><span class="no">Specs</span><span class="o">/</span><span class="n">f7fb546c4b0f80cab93513fc228b274be6459ad2</span><span class="o">/</span><span class="no">Specs</span><span class="o">/</span><span class="no">BlinkingLabel</span><span class="o">/</span><span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="no">BlinkingLabel</span><span class="o">.</span><span class="n">podspec</span><span class="o">.</span><span class="n">json</span>
+     <span class="o">-</span> <span class="no">Log</span> <span class="ss">messages</span><span class="p">:</span>
+    <span class="o">-</span> <span class="no">June</span> <span class="mi">29</span><span class="n">th</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span> <span class="no">Push</span> <span class="k">for</span> <span class="sb">`BlinkingLabel 0.1.0&#39; initiated.</span>
+<span class="sb">    - June 29th, 20:40: Push for `</span><span class="no">BlinkingLabel</span> <span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="err">&#39;</span> <span class="n">has</span> <span class="n">been</span> <span class="n">pushed</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="mi">701885099</span> <span class="n">s</span><span class="p">)</span><span class="o">.</span></code></pre></div> <p>All done</p> <aside class="share"> <span>Share this: </span> <a href="http://twitter.com/share?text=cocoapods use and create&amp;url=http://zhangxiaolian.com/cocoapods-use-and-create/&amp;hashtags=web,dev,blog,soudev&amp;via=nandomoreirame" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"> <i class="fa fa-twitter-square"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?u=http://zhangxiaolian.com/cocoapods-use-and-create/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"> <i class="fa fa-facebook-square"></i> </a> </aside> </div> </article> <footer class="footer t-center"> <div class="container"> <div class="social-icons"> <ul class="text-left"> <li><a href="" target="_blank"><i class="fa fa-facebook"></i></a></li> <li><a href="https://twitter.com/SuricZhang" target="_blank"><i class="fa fa-twitter"></i></a></li> </ul> </div> <small>&copy; 2016 All rights reserved. Made with <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and <i class="icon icon-heart"></i></small> <small>by <a href="http://nandomoreira.me" target="_blank">nandomoreira.me</a></small> </div> </footer> </main> </body> </html></body></html>
 <!--
 // # Zetsu Jekyll theme - https://github.com/nandomoreriame/zetsu/
 // by nandomoreira.me
