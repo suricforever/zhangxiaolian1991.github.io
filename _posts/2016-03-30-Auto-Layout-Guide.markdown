@@ -3,7 +3,7 @@ layout: post
 title:  "Auto Layout Guide"
 date:   2016-03-30 14:53:08
 categories: jekyll update
-comments: true
+comments: false
 ---
 # Auto Layout 编程指南
 
