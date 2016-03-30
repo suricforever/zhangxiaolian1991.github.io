@@ -6,19 +6,20 @@ categories: jekyll update
 comments: false
 ---
 ### Install
-    {% highlight ruby %}
-    sudo gem install cocoapods
-    {% endhighlight %}
 
+```
+sudo gem install cocoapods
+```
 ### Init
 Enter project directory 
     
- ```ruby
-  pod init
+ ```
+ pod init
  ``` 
     
 find Podfile，enter
 
+  ```
     platform :ios, '8.0'
     use_frameworks!
 
@@ -27,32 +28,38 @@ find Podfile，enter
       pod 'ORStackView', '~> 3.0'
       pod 'SwiftyJSON', '~> 2.3'
     end
+  ```
 
 Enter project directory 
 
-    pod install
-    
+ ```
+ pod install
+ ```  
 then
-    
-    $ open App.xcworkspace
-    
+ 
+ ```
+ $ open App.xcworkspace
+ ```
 import
 
-    #import <Reachability/Reachability.h>
-    
+```
+#import <Reachability/Reachability.h>
+```   
 
 #Publish cocoapod
 
 ### 1、Create the Project
 under your work directory（demo as **BlinkingLabel** )
-    
-    pod lib create BlinkingLabel
-
+  
+```  
+pod lib create BlinkingLabel
+```
 need answer some question
-
-    language swift 
-    demo app 选择 YES
  
+ ```
+ language swift 
+ demo app 选择 YES
+ ```
 ### 2、Updating Your Pod's Metadata  
 
 three file
@@ -63,10 +70,12 @@ three file
 
 under  **BlinkingLabel/Podspec Metadata/BlinkingLabel.podspec** find  **.podspec** 。
    
-    pod lib lint BlinkingLabel.podspec
-    
+```
+pod lib lint BlinkingLabel.podspec
+``` 
 check **.podspec**，will warning
-
+ 
+```
     > pod lib lint BlinkingLabel.podspec
     
     -> BlinkingLabel (0.1.0)
@@ -76,7 +85,7 @@ check **.podspec**，will warning
  
     [!] BlinkingLabel did not pass validation.
         You can use the `--no-clean` option to inspect   any issue.
-
+```
 some recommend value
 
 * **s.summary:** A subclass on UILabel that provides a blink.
@@ -85,26 +94,31 @@ some recommend value
 
 but  no github repo，goto github new **Repository** call **BlinkingLabel** 
 
+```
     git add .
     git commit -m “Initial Commit"
     git remote add origin https://github.com/  <GITHUB_USERNAME>/BlinkingLabel.git // replace <GITHUB_USERNAME> with your github.com username
     git push -u origin master
-
+```
 execute
    
-    pod lib lint BlinkingLabel.podspec
-  
+```
+pod lib lint BlinkingLabel.podspec
+```
 output
-    
+
+```
     > pod lib lint BlinkingLabel.podspec                                
  
     -> BlinkingLabel (0.1.0)
  
     BlinkingLabel passed validation.
-    
+```
+     
 ### 3、Add code
 under  **Pods/Development Pods/BlinkingLabel/Pod/Classes/** delete **ReplaceMe.swift** ,create **BlinkingLabel.swift**, input
-   
+
+ ``` 
     public class BlinkingLabel : UILabel {
     public func startBlinking() {
         let options : UIViewAnimationOptions = ［.Repeat,.Autoreverse]
@@ -118,9 +132,10 @@ under  **Pods/Development Pods/BlinkingLabel/Pod/Classes/** delete **ReplaceMe.s
         layer.removeAllAnimations()
     }
     }
-
+ ```
 open **BlinkingLabel/Example for BlinkingLabel/ViewController.swift** ,input
-    
+ 
+ ```   
     import UIKit
     import BlinkingLabel
  
@@ -156,9 +171,10 @@ open **BlinkingLabel/Example for BlinkingLabel/ViewController.swift** ,input
         isBlinking = !isBlinking
     }
     }
-
+ ```
 enter Example， pod install
-    
+
+ ``` 
     > cd Example 
     > pod install
     Analyzing dependencies
@@ -167,37 +183,42 @@ enter Example， pod install
     Installing BlinkingLabel 0.1.0 (was 0.1.0)
     Generating Pods project
     Integrating client project  
-    
+ ```   
 run Example project
 
 ### 4、upload Pod
 
 ####1、Add Tag
 
+ ```
     > git tag 0.1.0
     > git push origin 0.1.0
     Total 0 (delta 0), reused 0 (delta 0)
     To https://github.com/obuseme/BlinkingLabel.git
     [new tag]         0.1.0 -> 0.1.0
-    
+ ```   
   warning： Tag be same with s.version of .podspec
 
 ####2、valiate
-
-    pod spec lint BlinkingLabel.podspec
-    
+```
+pod spec lint BlinkingLabel.podspec
+```   
   output：
-      
-      > pod spec lint BlinkingLabel.podspec 
-     -> BlinkingLabel (0.1.0)
-     Analyzed 1 podspec.
-     BlinkingLabel.podspec passed validation.
-#### 3、push pod to **Specs Repository**
-
-    pod trunk push BlinkingLabel.podspec
     
- output：
+   ```   
+   > pod spec lint BlinkingLabel.podspec 
+   -> BlinkingLabel (0.1.0)
+   Analyzed 1 podspec.
+   BlinkingLabel.podspec passed validation.
+   ```
+#### 3、push pod to **Specs Repository**
  
+ ```
+ pod trunk push BlinkingLabel.podspec
+ ```   
+ output：
+  
+```
      > pod trunk push BlinkingLabel.podspec 
      Updating spec repo `master`
  
@@ -210,7 +231,7 @@ run Example project
      - Log messages:
     - June 29th, 20:40: Push for `BlinkingLabel 0.1.0' initiated.
     - June 29th, 20:40: Push for `BlinkingLabel 0.1.0' has been pushed (1.701885099 s).
-
+```
 All done
 
 [jekyll]:      http://jekyllrb.com
