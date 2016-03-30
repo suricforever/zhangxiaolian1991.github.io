@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Auto Layout Guide"
-date:   2016-03-30 14:53:08
+title:  "Auto Layout 编程指南"
+date:   2016-03-30 15:32:08
 categories: jekyll update
 comments: false
 ---
@@ -36,3 +36,7 @@ Auto Layout 可以动态响应 **外部改变（External Changes）**和 **内�
 * 基于 Frame 的 编程布局
 * AutoResize mask 自动适配外部变化
 * 全新的Auto Layout 布局 基于约束
+
+[jekyll]:      http://jekyllrb.com
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-help]: https://github.com/jekyll/jekyll-help

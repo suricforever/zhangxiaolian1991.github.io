@@ -5,12 +5,12 @@
     <description>Suric</description>
     <link>http://zhangxiaolian.com/</link>
     <atom:link href="http://zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Mar 2016 15:16:27 +0800</pubDate>
-    <lastBuildDate>Wed, 30 Mar 2016 15:16:27 +0800</lastBuildDate>
+    <pubDate>Wed, 30 Mar 2016 15:32:17 +0800</pubDate>
+    <lastBuildDate>Wed, 30 Mar 2016 15:32:17 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Auto Layout Guide</title>
+        <title>Auto Layout 编程指南</title>
         <description>&lt;h1 id=&quot;auto-layout-&quot;&gt;Auto Layout 编程指南&lt;/h1&gt;
 
 &lt;h3 id=&quot;auto-layout&quot;&gt;理解 Auto Layout&lt;/h3&gt;
@@ -48,8 +48,9 @@
   &lt;li&gt;AutoResize mask 自动适配外部变化&lt;/li&gt;
   &lt;li&gt;全新的Auto Layout 布局 基于约束&lt;/li&gt;
 &lt;/ul&gt;
+
 </description>
-        <pubDate>Wed, 30 Mar 2016 22:53:08 +0800</pubDate>
+        <pubDate>Wed, 30 Mar 2016 23:32:08 +0800</pubDate>
         <link>http://zhangxiaolian.com/auto-layout-guide/</link>
         <guid isPermaLink="true">http://zhangxiaolian.com/auto-layout-guide/</guid>
         
