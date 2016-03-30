@@ -6,17 +6,17 @@ categories: jekyll update
 comments: false
 ---
 ### Install
-   
-    {% highlight ruby %}
-    sudo gem install cocoapods
-    {% endhighlight %}
+ 
+{% highlight ruby %}
+sudo gem install cocoapods
+{% endhighlight %}
 
 ### Init
 Enter project directory 
     
-    {% highlight ruby %}
-    pod init
-    {% endhighlight %}
+{% highlight ruby %}
+pod init
+{% endhighlight %}
 
 find Podfile，enter
     
@@ -49,7 +49,8 @@ import
     #import <Reachability/Reachability.h>
     {% endhighlight %}
 
-#Publish cocoapod
+
+# Publish cocoapod
 
 ### 1、Create the Project
 under your work directory（demo as **BlinkingLabel** )
@@ -114,7 +115,6 @@ execute
     {% highlight ruby %}
     pod lib lint BlinkingLabel.podspec
     {% endhighlight %}
-
   
 output
     
@@ -125,7 +125,6 @@ output
  
     BlinkingLabel passed validation.
     {% endhighlight %}
-
     
 ### 3、Add code
 under  **Pods/Development Pods/BlinkingLabel/Pod/Classes/** delete **ReplaceMe.swift** ,create **BlinkingLabel.swift**, input
