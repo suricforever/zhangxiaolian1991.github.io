@@ -5,8 +5,6 @@ date:   2016-03-30 15:32:08
 categories: jekyll update
 comments: false
 ---
-# Auto Layout 编程指南
-
 ### 理解 Auto Layout
 
 Auto Layout 会动态计算在 View hierarchy 中所有的 View 的大小和位置，并根据 contrainst 进行布局。例如，一个 button 在 imageView 上的 contrainst 为水平居中并且离顶部 8 个像素点的距离 ，当 imageView 的 size 或者 position 改变的时候，button 的 position 会动态的改变以适应前面设置的 contrainst。

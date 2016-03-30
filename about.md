@@ -5,10 +5,8 @@ permalink: /about/
 slug: about
 ---
 
-This is a Jekyll theme. You can find out more information about customizing your theme Jekyll, as well as basic documentation Jekyll use in [jekyllrb.com](http://jekyllrb.com/).
+这是我的个人 iOS blog，主要写 iOS 开发相关的知识，欢迎多交流与互相学习。
 
-You can find the source code for this theme: [github.com/nandomoreirame/zetsu]({{ site.github }})
+个人邮箱：zhangxiaolian1991@gmail.com
 
-You can find the source code in Jekyll [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
-
-Theme developed by: [{{ site.author.name }}]({{ site.author.url }})
+Github：https://github.com/zhangxiaolian1991

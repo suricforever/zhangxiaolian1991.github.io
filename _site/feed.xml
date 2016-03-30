@@ -5,15 +5,13 @@
     <description>Suric</description>
     <link>http://zhangxiaolian.com/</link>
     <atom:link href="http://zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Mar 2016 15:56:24 +0800</pubDate>
-    <lastBuildDate>Wed, 30 Mar 2016 15:56:24 +0800</lastBuildDate>
+    <pubDate>Wed, 30 Mar 2016 16:32:38 +0800</pubDate>
+    <lastBuildDate>Wed, 30 Mar 2016 16:32:38 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Auto Layout 编程指南</title>
-        <description>&lt;h1 id=&quot;auto-layout-&quot;&gt;Auto Layout 编程指南&lt;/h1&gt;
-
-&lt;h3 id=&quot;auto-layout&quot;&gt;理解 Auto Layout&lt;/h3&gt;
+        <description>&lt;h3 id=&quot;auto-layout&quot;&gt;理解 Auto Layout&lt;/h3&gt;
 
 &lt;p&gt;Auto Layout 会动态计算在 View hierarchy 中所有的 View 的大小和位置，并根据 contrainst 进行布局。例如，一个 button 在 imageView 上的 contrainst 为水平居中并且离顶部 8 个像素点的距离 ，当 imageView 的 size 或者 position 改变的时候，button 的 position 会动态的改变以适应前面设置的 contrainst。&lt;/p&gt;
 
