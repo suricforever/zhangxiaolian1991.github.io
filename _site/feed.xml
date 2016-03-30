@@ -5,9 +5,60 @@
     <description>Suric</description>
     <link>http://zhangxiaolian.com/</link>
     <atom:link href="http://zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Mar 2016 14:38:23 +0800</pubDate>
-    <lastBuildDate>Wed, 30 Mar 2016 14:38:23 +0800</lastBuildDate>
+    <pubDate>Wed, 30 Mar 2016 14:54:35 +0800</pubDate>
+    <lastBuildDate>Wed, 30 Mar 2016 14:54:35 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Auto Layout 编程指南</title>
+        <description>&lt;h1 id=&quot;auto-layout-&quot;&gt;Auto Layout 编程指南&lt;/h1&gt;
+
+&lt;h3 id=&quot;auto-layout&quot;&gt;理解 Auto Layout&lt;/h3&gt;
+
+&lt;p&gt;Auto Layout 会动态计算在 View hierarchy 中所有的 View 的大小和位置，并根据 contrainst 进行布局。例如，一个 button 在 imageView 上的 contrainst 为水平居中并且离顶部 8 个像素点的距离 ，当 imageView 的 size 或者 position 改变的时候，button 的 position 会动态的改变以适应前面设置的 contrainst。&lt;/p&gt;
+
+&lt;p&gt;Auto Layout 可以动态响应 &lt;strong&gt;外部改变（External Changes）&lt;/strong&gt;和 &lt;strong&gt;内部改变（Internal Changes）&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;external-changes&quot;&gt;外部改变（External Changes）&lt;/h4&gt;
+&lt;p&gt;当 superview 的 size 和 shape 发生改变时，会触发 &lt;strong&gt;外部改变（External Changes）&lt;/strong&gt;。无论改变那个，都要 更新 view hierarchy 的 布局（layout）。以下是一些 &lt;strong&gt;外部改变（External Changes）&lt;/strong&gt; 的例子:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;改变窗口（window）的大小（OS X）&lt;/li&gt;
+  &lt;li&gt;在iPad上 进入或者离开 Split View（iOS）&lt;/li&gt;
+  &lt;li&gt;设备旋转 （iOS）&lt;/li&gt;
+  &lt;li&gt;电话或录音的 bar 的出现或消失 （iOS）&lt;/li&gt;
+  &lt;li&gt;支持不同的 Size Classes&lt;/li&gt;
+  &lt;li&gt;支持不同的屏幕大小（iOS）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;internal-changes&quot;&gt;内部改变（Internal Changes）&lt;/h4&gt;
+
+&lt;p&gt;当内部的 View 或 control 的大小发生变化时，会触发 &lt;strong&gt;内部改变（Internal Changes）&lt;/strong&gt;。以下是一些 &lt;strong&gt;内部改变（External Changes）&lt;/strong&gt; 的例子&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;app 显示的内容发生变化&lt;/li&gt;
+  &lt;li&gt;国际化&lt;/li&gt;
+  &lt;li&gt;支持动态类型（Dynamic Type）（iOS）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;auto-layout-versus-frame-based-layout&quot;&gt;Auto Layout Versus Frame-Based Layout&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;基于 Frame 的 编程布局&lt;/li&gt;
+  &lt;li&gt;AutoResize mask 自动适配外部变化&lt;/li&gt;
+  &lt;li&gt;全新的Auto Layout 布局 基于约束&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 30 Mar 2016 22:53:08 +0800</pubDate>
+        <link>http://zhangxiaolian.com/Auto-Layout-Guide/</link>
+        <guid isPermaLink="true">http://zhangxiaolian.com/Auto-Layout-Guide/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>cocoapods use and create</title>
