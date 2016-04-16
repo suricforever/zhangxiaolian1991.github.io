@@ -5,18 +5,14 @@ date:   2016-03-29 03:00:08
 categories: jekyll update
 comments: false
 ---
-### Install
+###Install
  
-{% highlight ruby %}
-sudo gem install cocoapods
-{% endhighlight %}
+    sudo gem install cocoapods
 
-### Init
+###Init
 Enter project directory 
     
-{% highlight ruby %}
-pod init
-{% endhighlight %}
+    pod init
 
 find Podfile，enter
     
