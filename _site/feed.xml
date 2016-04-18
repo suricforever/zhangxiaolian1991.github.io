@@ -6,8 +6,8 @@
 </description>
     <link>http://www.zhangxiaolian.com/</link>
     <atom:link href="http://www.zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Apr 2016 10:47:29 +0800</pubDate>
-    <lastBuildDate>Mon, 18 Apr 2016 10:47:29 +0800</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2016 10:57:40 +0800</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2016 10:57:40 +0800</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -17,19 +17,19 @@
 &lt;h4 id=&quot;github-&quot;&gt;1、在 Github 上创建仓库&lt;/h4&gt;
 &lt;p&gt;直接新建仓库（repo），注意勾选license，如下图&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/podDemo-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.zhangxiaolian.com/assets/podDemo-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;xcode--demo&quot;&gt;2、Xcode 创建 Demo，并添加自己的库&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/podDemo-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.zhangxiaolian.com/assets/podDemo-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;此处新建了 PodDemoLog 文件夹，你也可以自己把已经写好的库类拖进工程文件夹&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/podDemo-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.zhangxiaolian.com/assets/podDemo-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;给 PodDemoLog 添加 Class（若是直接拖进来的Class，请忽略此步骤）&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/podDemo-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.zhangxiaolian.com/assets/podDemo-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;demo--github-&quot;&gt;3、给本地 Demo 仓库添加第一步在 Github 上创建的远程&lt;/h4&gt;
 
