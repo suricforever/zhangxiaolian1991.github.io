@@ -15,6 +15,7 @@ dribbbleUsername:
 codepenUsername:
 
 # Build settings
+future: true
 permalink: /:year/:month/:title
 markdown: kramdown
 include: [_pages]
