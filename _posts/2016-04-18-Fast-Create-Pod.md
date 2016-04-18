@@ -11,19 +11,19 @@ comments: false
 #### 1、在 Github 上创建仓库
 直接新建仓库（repo），注意勾选license，如下图
 
-![](../assets/podDemo-1.png)
+![](./assets/podDemo-1.png)
 
 #### 2、Xcode 创建 Demo，并添加自己的库 
 
-![](../assets/podDemo-2.png)
+![](./assets/podDemo-2.png)
 
 此处新建了 PodDemoLog 文件夹，你也可以自己把已经写好的库类拖进工程文件夹
 
-![](../assets/podDemo-3.png)
+![](./assets/podDemo-3.png)
 
 给 PodDemoLog 添加 Class（若是直接拖进来的Class，请忽略此步骤）
 
-![](../assets/podDemo-4.png)
+![](./assets/podDemo-4.png)
 
 #### 3、给本地 Demo 仓库添加第一步在 Github 上创建的远程
 
