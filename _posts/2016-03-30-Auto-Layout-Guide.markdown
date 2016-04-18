@@ -31,9 +31,9 @@ Auto Layout 可以动态响应 **外部改变（External Changes）**和 **内�
 
 #### Auto Layout Versus Frame-Based Layout
 
-* 基于 Frame 的 编程布局
-* AutoResize mask 自动适配外部变化
-* 全新的Auto Layout 布局 基于约束
+ * 基于 Frame 的 编程布局
+ * AutoResize mask 自动适配外部变化
+ * 全新的Auto Layout 布局 基于约束
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll

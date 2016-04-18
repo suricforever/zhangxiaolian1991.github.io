@@ -6,9 +6,150 @@
 </description>
     <link>http://www.zhangxiaolian.com/</link>
     <atom:link href="http://www.zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 16 Apr 2016 18:16:27 +0800</pubDate>
-    <lastBuildDate>Sat, 16 Apr 2016 18:16:27 +0800</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2016 10:16:31 +0800</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2016 10:16:31 +0800</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>快速为自己的库创建 cocoapod</title>
+        <description>&lt;h3 id=&quot;cocoapods&quot;&gt;快速为自己的库创建 cocoapods&lt;/h3&gt;
+
+&lt;h4 id=&quot;github-&quot;&gt;1、在 Github 上创建仓库&lt;/h4&gt;
+&lt;p&gt;直接新建仓库（repo），注意勾选license，如下图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/podDemo-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;xcode--demo&quot;&gt;2、Xcode 创建 Demo，并添加自己的库&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/podDemo-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;此处新建了 PodDemoLog 文件夹，你也可以自己把已经写好的库类拖进工程文件夹&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/podDemo-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;给 PodDemoLog 添加 Class（若是直接拖进来的Class，请忽略此步骤）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/podDemo-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;demo--github-&quot;&gt;3、给本地 Demo 仓库添加第一步在 Github 上创建的远程&lt;/h4&gt;
+
+&lt;p&gt;进入 PodDemo 工作目录：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd /Users/zhangxiaolian/Work/Suric-Open-Source/PodDemo 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;提交本地修改：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git add .
+$ git commit -m &quot;some change&quot;   
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;添加远程仓库：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git remote add origin https://github.com/zhangxiaolian1991/PodDemo.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;获取 LICENSE：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git pull
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;tag-github&quot;&gt;4、添加 Tag, 并提交到Github&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git tag 0.0.1
+ $ git push --tags
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;podspec-&quot;&gt;5、给本地库创建 .podspec 文件&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ pod spec create PodFastDemo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;打开 PodDemo.podspec, 做出相应修改：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Pod::Spec.new do |s|
+ 
+ s.name         = &quot;PodFastDemo&quot;
+ s.version      = &quot;0.0.1&quot;
+ s.summary      = &quot;PodDemo to demo fast way for create self pod&quot;
+ s.description  = &quot; demo fast way to create self pod, hope can help you&quot;
+
+ s.homepage     = &quot;https://github.com/zhangxiaolian1991/PodDemo&quot;
+
+ s.license      = { :type =&amp;gt; &quot;MIT&quot;, :file =&amp;gt; &quot;LICENSE&quot; }
+ s.author             = { &quot;Suric Zhang&quot; =&amp;gt; &quot;372081349@qq.com&quot; }
+ s.source       = { :git =&amp;gt; &quot;https://github.com/zhangxiaolian1991/PodDemo.git&quot;, :tag =&amp;gt; &quot;0.0.1&quot; }
+ s.source_files  = &quot;PodDemoLog/**/*.{h,m}&quot;
+  
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;验证 .podspec:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pod spec lint
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;通过显示如下&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -&amp;gt;PodDemo (0.0.1)
+
+ Analyzed 1 podspec.
+
+ PodDemo.podspec passed validation.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;cocoapods-1&quot;&gt;6、上传到 CocoaPods&lt;/h4&gt;
+&lt;p&gt;若没有注册过 trunk，请先注册&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pod trunk register 你的邮箱 &#39;用户名&#39; --description=&#39;简单描述&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;上传到 trunk&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pod trunk push PodFastDemo.podspec 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;等待成功：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; - Data URL: https://raw.githubusercontent.com/CocoaPods/Specs/c1ed6aa29763cea3a074895f1d289ff634f522b3/Specs/PodFastDemo/0.0.1/PodFastDemo.podspec.json
+- Log messages:
+- April 17th, 19:54: Push for `PodFastDemo 0.0.1&#39; initiated.
+- April 17th, 19:54: Push for `PodFastDemo 0.0.1&#39; has been pushed
+(3.886741843 s). 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;#### 7、测试 Pod
+ 进入本地 PodDemo 仓库目录&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   $ pod init
+   $ pod install  运行工程即可
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;demo 已上传 &lt;a href=&quot;https://github.com/zhangxiaolian1991/PodDemo&quot;&gt;Github&lt;/a&gt;，请自由 Star&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Apr 2016 17:32:08 +0800</pubDate>
+        <link>http://www.zhangxiaolian.com/2016/04/Fast-Create-Pod</link>
+        <guid isPermaLink="true">http://www.zhangxiaolian.com/2016/04/Fast-Create-Pod</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>Auto Layout 编程指南</title>

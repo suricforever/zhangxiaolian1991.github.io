@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="t-purple">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>快速为自己的库创建 cocoapod</title>
+  <meta name="description" content="快速为自己的库创建 cocoapods">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Roboto+Mono:400,500' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.zhangxiaolian.com/2016/03/Fast-Create-Pod">
+  <link rel="alternate" type="application/rss+xml" title="张晓连的Blog" href="http://www.zhangxiaolian.com/feed.xml">
+</head>
+
+  <body>
+    <nav class="c-navigation is-fixed">
+  <div class="c-navigation__container u-container">
+    <a class="c-navigation__item " href="/">Home</a>
+    <a class="c-navigation__item " href="/articles/">Articles</a>
+    <a class="c-navigation__item " href="/about/">About</a>
+  </div>
+</nav>
+
+
+    <article class="c-article">
+  <header class="c-header c-article__header">
+    <div class="u-container">
+      <h1 class="c-header__title">快速为自己的库创建 cocoapod</h1>
+    </div>
+  </header>
+
+  <div class="c-article__main">
+    <h3 id="cocoapods">快速为自己的库创建 cocoapods</h3>
+
+<h4 id="github-">1、在 Github 上创建仓库</h4>
+<p>直接新建仓库（repo），注意勾选license，如下图</p>
+
+<p><img src="../assets/podDemo-1.png" alt="" /></p>
+
+<h4 id="xcode--demo">2、Xcode 创建 Demo，并添加自己的库</h4>
+
+<p><img src="../assets/podDemo-2.png" alt="" /></p>
+
+<p>此处新建了 PodDemoLog 文件夹，你也可以自己把已经写好的库类拖进工程文件夹</p>
+
+<p><img src="../assets/podDemo-3.png" alt="" /></p>
+
+<p>给 PodDemoLog 添加 Class（若是直接拖进来的Class，请忽略此步骤）</p>
+
+<p><img src="../assets/podDemo-4.png" alt="" /></p>
+
+<h4 id="demo--github-">3、给本地 Demo 仓库添加第一步在 Github 上创建的远程</h4>
+
+<p>进入 PodDemo 工作目录：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cd /Users/zhangxiaolian/Work/Suric-Open-Source/PodDemo 
+</code></pre>
+</div>
+
+<p>提交本地修改：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git add .
+$ git commit -m "some change"   
+</code></pre>
+</div>
+
+<p>添加远程仓库：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git remote add origin https://github.com/zhangxiaolian1991/PodDemo.git
+</code></pre>
+</div>
+
+<p>获取 LICENSE：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git pull
+</code></pre>
+</div>
+
+<h4 id="tag-github">4、添加 Tag, 并提交到Github</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> $ git tag 0.0.1
+ $ git push --tags
+</code></pre>
+</div>
+
+<h4 id="podspec-">5、给本地库创建 .podspec 文件</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> $ pod spec create PodFastDemo
+</code></pre>
+</div>
+
+<p>打开 PodDemo.podspec, 做出相应修改：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> Pod::Spec.new do |s|
+ 
+ s.name         = "PodFastDemo"
+ s.version      = "0.0.1"
+ s.summary      = "PodDemo to demo fast way for create self pod"
+ s.description  = " demo fast way to create self pod, hope can help you"
+
+ s.homepage     = "https://github.com/zhangxiaolian1991/PodDemo"
+
+ s.license      = { :type =&gt; "MIT", :file =&gt; "LICENSE" }
+ s.author             = { "Suric Zhang" =&gt; "372081349@qq.com" }
+ s.source       = { :git =&gt; "https://github.com/zhangxiaolian1991/PodDemo.git", :tag =&gt; "0.0.1" }
+ s.source_files  = "PodDemoLog/**/*.{h,m}"
+  
+end
+</code></pre>
+</div>
+
+<p>验证 .podspec:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ pod spec lint
+</code></pre>
+</div>
+
+<p>通过显示如下</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  -&gt;PodDemo (0.0.1)
+
+ Analyzed 1 podspec.
+
+ PodDemo.podspec passed validation.
+</code></pre>
+</div>
+
+<h4 id="cocoapods-1">6、上传到 CocoaPods</h4>
+<p>若没有注册过 trunk，请先注册</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ pod trunk register 你的邮箱 '用户名' --description='简单描述'
+</code></pre>
+</div>
+
+<p>上传到 trunk</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ pod trunk push PodFastDemo.podspec 
+</code></pre>
+</div>
+
+<p>等待成功：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> - Data URL: https://raw.githubusercontent.com/CocoaPods/Specs/c1ed6aa29763cea3a074895f1d289ff634f522b3/Specs/PodFastDemo/0.0.1/PodFastDemo.podspec.json
+- Log messages:
+- April 17th, 19:54: Push for `PodFastDemo 0.0.1' initiated.
+- April 17th, 19:54: Push for `PodFastDemo 0.0.1' has been pushed
+(3.886741843 s). 
+</code></pre>
+</div>
+
+<p>#### 7、测试 Pod
+ 进入本地 PodDemo 仓库目录</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>   $ pod init
+   $ pod install  运行工程即可
+</code></pre>
+</div>
+
+<p>demo 已上传 <a href="https://github.com/zhangxiaolian1991/PodDemo">Github</a>，请自由 Star</p>
+
+
+  </div>
+</article>
+
+
+    <footer class="c-footer">
+  <div class="u-container c-footer__container">
+    <p>&copy; 张晓连的Blog 2016</p>
+    <p>
+      <a href="https://twitter.com/SuricZhang">Twitter</a>
+      <a href="https://github.com/zhangxiaolian1991">Github</a>
+      
+      
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>
