@@ -20,6 +20,9 @@ title: iOS - 知识体系
   
   * Objective-C :[Specta](https://github.com/specta/specta)
   * Swift: [Quick](https://github.com/Quick/Quick)
+  
+  * 代码Review： Reviewable,
+  * 测试代码覆盖： Coveralls, Coverage Status
 
 #### 代码规范
 
@@ -45,7 +48,11 @@ title: iOS - 知识体系
 
 * Git: [Source Tree](https://www.sourcetreeapp.com/)
 
-* 持续集成：Jenkins
+* 持续集成：   
+
+ * Jenkins,
+ * TravisCI(CircelCI),
+ * OS X Server  集成
 
 #### 项目管理 和 个人日程管理
 
