@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "cocoapods use and create"
+title:  "Cocoapods use and create"
 date:   2016-03-29 03:00:08
 categories: jekyll update
 comments: false
