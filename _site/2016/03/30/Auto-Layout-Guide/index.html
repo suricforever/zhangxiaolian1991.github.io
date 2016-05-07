@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Layout 编程指南</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zhangxiaolian" href="/feed.xml" />
+  <!-- Begin Jekyll SEO tag v1.3.3 -->
+<title>Auto Layout 编程指南 - Zhangxiaolian</title>
+<meta property="og:title" content="Auto Layout 编程指南" />
+<meta name="description" content="理解 Auto Layout" />
+<meta property="og:description" content="理解 Auto Layout" />
+<link rel="canonical" href="http://www.zhangxiaolian.com/2016/03/30/Auto-Layout-Guide/" />
+<meta property="og:url" content="http://www.zhangxiaolian.com/2016/03/30/Auto-Layout-Guide/" />
+<meta property="og:site_name" content="Zhangxiaolian" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-03-30T23:32:08+08:00" />
+<link rel="next" href="http://www.zhangxiaolian.com/2016/04/18/Fast-Create-Pod/" title="快速为自己的库创建 cocoapod" />
+<link rel="prev" href="http://www.zhangxiaolian.com/2016/03/29/cocoapods-use-and-create/" title="cocoapods use and create" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@SuricZhang" />
+<meta name="twitter:creator" content="@zhangxiaolian" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Auto Layout 编程指南",
+    "datePublished": "2016-03-30T23:32:08+08:00",
+    "description": "理解 Auto Layout",
+    "url": "http://www.zhangxiaolian.com/2016/03/30/Auto-Layout-Guide/"
+  }
+</script>
+<!-- End Jekyll SEO tag -->
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+  <h1 class="masthead-title--small">
+    <a href="/">Zhangxiaolian</a>
+  </h1>
+</header>
+<div class="content post">
+  <h1 class="post-title">Auto Layout 编程指南</h1>
+  <div class="post-date">
+    <time>30 Mar 2016</time>
+  </div>
+  <h3 id="auto-layout">理解 Auto Layout</h3>
+
+<p>Auto Layout 会动态计算在 View hierarchy 中所有的 View 的大小和位置，并根据 contrainst 进行布局。例如，一个 button 在 imageView 上的 contrainst 为水平居中并且离顶部 8 个像素点的距离 ，当 imageView 的 size 或者 position 改变的时候，button 的 position 会动态的改变以适应前面设置的 contrainst。</p>
+
+<p>Auto Layout 可以动态响应 <strong>外部改变（External Changes）</strong>和 <strong>内部改变（Internal Changes）</strong>。</p>
+
+<h4 id="external-changes">外部改变（External Changes）</h4>
+<p>当 superview 的 size 和 shape 发生改变时，会触发 <strong>外部改变（External Changes）</strong>。无论改变那个，都要 更新 view hierarchy 的 布局（layout）。以下是一些 <strong>外部改变（External Changes）</strong> 的例子:</p>
+
+<ul>
+  <li>改变窗口（window）的大小（OS X）</li>
+  <li>在iPad上 进入或者离开 Split View（iOS）</li>
+  <li>设备旋转 （iOS）</li>
+  <li>电话或录音的 bar 的出现或消失 （iOS）</li>
+  <li>支持不同的 Size Classes</li>
+  <li>支持不同的屏幕大小（iOS）</li>
+</ul>
+
+<h4 id="internal-changes">内部改变（Internal Changes）</h4>
+
+<p>当内部的 View 或 control 的大小发生变化时，会触发 <strong>内部改变（Internal Changes）</strong>。以下是一些 <strong>内部改变（External Changes）</strong> 的例子</p>
+
+<ul>
+  <li>app 显示的内容发生变化</li>
+  <li>国际化</li>
+  <li>支持动态类型（Dynamic Type）（iOS）</li>
+</ul>
+
+<h4 id="auto-layout-versus-frame-based-layout">Auto Layout Versus Frame-Based Layout</h4>
+
+<ul>
+  <li>基于 Frame 的 编程布局</li>
+  <li>AutoResize mask 自动适配外部变化</li>
+  <li>全新的Auto Layout 布局 基于约束</li>
+</ul>
+
+
+</div>
+
+  </div>
+</body>
+</html>

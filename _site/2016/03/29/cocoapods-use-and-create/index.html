@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cocoapods use and create</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zhangxiaolian" href="/feed.xml" />
+  <!-- Begin Jekyll SEO tag v1.3.3 -->
+<title>cocoapods use and create - Zhangxiaolian</title>
+<meta property="og:title" content="cocoapods use and create" />
+<meta name="description" content="Installsudo gem install cocoapods" />
+<meta property="og:description" content="Installsudo gem install cocoapods" />
+<link rel="canonical" href="http://www.zhangxiaolian.com/2016/03/29/cocoapods-use-and-create/" />
+<meta property="og:url" content="http://www.zhangxiaolian.com/2016/03/29/cocoapods-use-and-create/" />
+<meta property="og:site_name" content="Zhangxiaolian" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-03-29T11:00:08+08:00" />
+<link rel="next" href="http://www.zhangxiaolian.com/2016/03/30/Auto-Layout-Guide/" title="Auto Layout 编程指南" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@SuricZhang" />
+<meta name="twitter:creator" content="@zhangxiaolian" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "cocoapods use and create",
+    "datePublished": "2016-03-29T11:00:08+08:00",
+    "description": "Installsudo gem install cocoapods",
+    "url": "http://www.zhangxiaolian.com/2016/03/29/cocoapods-use-and-create/"
+  }
+</script>
+<!-- End Jekyll SEO tag -->
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+  <h1 class="masthead-title--small">
+    <a href="/">Zhangxiaolian</a>
+  </h1>
+</header>
+<div class="content post">
+  <h1 class="post-title">cocoapods use and create</h1>
+  <div class="post-date">
+    <time>29 Mar 2016</time>
+  </div>
+  <h3 id="install">Install</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo gem install cocoapods
+</code></pre>
+</div>
+
+<h3 id="init">Init</h3>
+<p>Enter project directory</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pod init
+</code></pre>
+</div>
+
+<p>find Podfile，enter</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>platform :ios, '8.0'
+use_frameworks!
+
+target 'MyApp' do
+  pod 'AFNetworking', '~&gt; 2.6'
+  pod 'ORStackView', '~&gt; 3.0'
+  pod 'SwiftyJSON', '~&gt; 2.3'
+end
+</code></pre>
+</div>
+
+<p>Enter project directory</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pod install
+</code></pre>
+</div>
+
+<p>then</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ open App.xcworkspace
+</code></pre>
+</div>
+
+<p>import</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>#import &lt;Reachability/Reachability.h&gt;
+</code></pre>
+</div>
+
+<h1 id="publish-cocoapod">Publish cocoapod</h1>
+
+<h3 id="create-the-project">1、Create the Project</h3>
+<p>under your work directory（demo as <strong>BlinkingLabel</strong> )</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pod lib create BlinkingLabel
+</code></pre>
+</div>
+
+<p>need answer some question</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>language choose swift 
+demo app choose YES
+</code></pre>
+</div>
+
+<h3 id="updating-your-pods-metadata">2、Updating Your Pod’s Metadata</h3>
+
+<p>three file</p>
+
+<ul>
+  <li><strong>.podspec</strong>: version，author，homepage</li>
+  <li><strong>README</strong>: some introduce of you project</li>
+  <li><strong>LICENSE</strong>:MIT</li>
+</ul>
+
+<p>under  <strong>BlinkingLabel/Podspec Metadata/BlinkingLabel.podspec</strong> find  <strong>.podspec</strong> 。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pod lib lint BlinkingLabel.podspec
+</code></pre>
+</div>
+
+<p>check <strong>.podspec</strong>，will warning</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt; pod lib lint BlinkingLabel.podspec
+
+-&gt; BlinkingLabel (0.1.0)
+- WARN  | The summary is not meaningful.
+- WARN  | The description is not meaningful.
+- WARN  | There was a problem validating the URL      https://github.com/&lt;GITHUB_USERNAME&gt;/BlinkingLabel.
+ 
+[!] BlinkingLabel did not pass validation.
+    You can use the `--no-clean` option to inspect   any issue.
+</code></pre>
+</div>
+
+<p>some recommend value</p>
+
+<ul>
+  <li><strong>s.summary:</strong> A subclass on UILabel that provides a blink.</li>
+  <li><strong>s.description:</strong> This CocoaPod provides the ability to use a UILabel that may be started and stopped blinking.</li>
+  <li><strong>s.homepage:</strong> https://github.com/obuseme/BlinkingLabel (replace obuseme with your GitHub username)</li>
+</ul>
+
+<p>but  no github repo，goto github new <strong>Repository</strong> call <strong>BlinkingLabel</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git add .
+git commit -m "Initial Commit"
+git remote add origin https://github.com/  &lt;GITHUB_USERNAME&gt;/BlinkingLabel.git // replace &lt;GITHUB_USERNAME&gt; with your github.com username
+git push -u origin master
+</code></pre>
+</div>
+
+<p>execute</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pod lib lint BlinkingLabel.podspec
+</code></pre>
+</div>
+
+<p>output</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt; pod lib lint BlinkingLabel.podspec                                
+ 
+-&gt; BlinkingLabel (0.1.0)
+ 
+BlinkingLabel passed validation.
+</code></pre>
+</div>
+
+<h3 id="add-code">3、Add code</h3>
+<p>under  <strong>Pods/Development Pods/BlinkingLabel/Pod/Classes/</strong> delete <strong>ReplaceMe.swift</strong> ,create <strong>BlinkingLabel.swift</strong>, input</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>public class BlinkingLabel : UILabel {
+public func startBlinking() {
+    let options : UIViewAnimationOptions = ［.Repeat,.Autoreverse]
+    UIView.animateWithDuration(0.25, delay:0.0, options:options, animations: {
+        self.alpha = 0
+        }, completion: nil)
+}
+ 
+public func stopBlinking() {
+    alpha = 1
+    layer.removeAllAnimations()
+}
+}
+</code></pre>
+</div>
+
+<p>open <strong>BlinkingLabel/Example for BlinkingLabel/ViewController.swift</strong> ,input</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import UIKit
+import BlinkingLabel
+ 
+class ViewController: UIViewController {
+ 
+var isBlinking = false
+let blinkingLabel = BlinkingLabel(frame: CGRectMake(10, 20, 200, 30))
+ 
+override func viewDidLoad() {
+    super.viewDidLoad()
+ 
+    // Setup the BlinkingLabel
+    blinkingLabel.text = "I blink!"
+    blinkingLabel.font = UIFont.systemFontOfSize(20)
+    view.addSubview(blinkingLabel)
+    blinkingLabel.startBlinking()
+    isBlinking = true
+ 
+    // Create a UIButton to toggle the blinking
+    let toggleButton = UIButton(frame: CGRectMake(10, 60, 125, 30))
+    toggleButton.setTitle("Toggle Blinking", forState: .Normal)
+    toggleButton.setTitleColor(UIColor.redColor(), forState: .Normal)
+    toggleButton.addTarget(self, action: "toggleBlinking", forControlEvents: .TouchUpInside)
+    view.addSubview(toggleButton)
+}
+ 
+func toggleBlinking() {
+    if (isBlinking) {
+        blinkingLabel.stopBlinking()
+    } else {
+        blinkingLabel.startBlinking()
+    }
+    isBlinking = !isBlinking
+}
+}
+</code></pre>
+</div>
+
+<p>enter Example， pod install</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt; cd Example 
+&gt; pod install
+Analyzing dependencies
+Fetching podspec for `BlinkingLabel` from `../`
+Downloading dependencies
+Installing BlinkingLabel 0.1.0 (was 0.1.0)
+Generating Pods project
+Integrating client project 
+</code></pre>
+</div>
+
+<p>run Example project</p>
+
+<h3 id="upload-pod">4、upload Pod</h3>
+
+<h4 id="add-tag">1、Add Tag</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt; git tag 0.1.0
+&gt; git push origin 0.1.0
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/obuseme/BlinkingLabel.git
+[new tag]         0.1.0 -&gt; 0.1.0
+</code></pre>
+</div>
+
+<p>warning： Tag be same with s.version of .podspec</p>
+
+<h4 id="valiate">2、valiate</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pod spec lint BlinkingLabel.podspec
+</code></pre>
+</div>
+
+<p>output：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  &gt; pod spec lint BlinkingLabel.podspec 
+ -&gt; BlinkingLabel (0.1.0)
+ Analyzed 1 podspec.
+ BlinkingLabel.podspec passed validation.
+</code></pre>
+</div>
+
+<h4 id="push-pod-to-specs-repository">3、push pod to <strong>Specs Repository</strong></h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pod trunk push BlinkingLabel.podspec
+</code></pre>
+</div>
+
+<p>output：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> &gt; pod trunk push BlinkingLabel.podspec 
+ Updating spec repo `master`
+ 
+ Validating podspec
+ -&gt; BlinkingLabel (0.1.0)
+ 
+Updating spec repo `master`
+ 
+ - Data URL: https://raw.githubusercontent.com/CocoaPods/Specs/f7fb546c4b0f80cab93513fc228b274be6459ad2/Specs/BlinkingLabel/0.1.0/BlinkingLabel.podspec.json
+ - Log messages:
+- June 29th, 20:40: Push for `BlinkingLabel 0.1.0' initiated.
+- June 29th, 20:40: Push for `BlinkingLabel 0.1.0' has been pushed (1.701885099 s).
+</code></pre>
+</div>
+
+<p>All done</p>
+
+
+</div>
+
+  </div>
+</body>
+</html>

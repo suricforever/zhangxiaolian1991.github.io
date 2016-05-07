@@ -1,17 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>张晓连的Blog</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Zhangxiaolian</title>
+		<link>http://www.zhangxiaolian.com</link>
+		<atom:link href="http://www.zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>iOS - 知识体系</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;基础&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;进阶&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;牛逼&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;其他&lt;/h2&gt;
+
+&lt;h4 id=&quot;dependency-manager-&quot;&gt;Dependency manager （包管理工具）&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cocoapods.org/&quot;&gt;CocoaPods&lt;/a&gt;: 目前使用最广泛的包管理工具&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Carthage/Carthage&quot;&gt;Carthage&lt;/a&gt;: 去中心化的包管理工具，swift 项目建议使用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-4&quot;&gt;单元测试&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Objective-C :&lt;a href=&quot;https://github.com/specta/specta&quot;&gt;Specta&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Swift: &lt;a href=&quot;https://github.com/Quick/Quick&quot;&gt;Quick&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;代码Review： Reviewable,&lt;/li&gt;
+  &lt;li&gt;测试代码覆盖： Coveralls, Coverage Status&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-5&quot;&gt;代码规范&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Objective-C:&lt;a href=&quot;https://github.com/raywenderlich/objective-c-style-guide&quot;&gt;https://github.com/raywenderlich/objective-c-style-guide&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Swift: &lt;a href=&quot;https://github.com/raywenderlich/swift-style-guide&quot;&gt;https://github.com/raywenderlich/swift-style-guide&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/realm/SwiftLint&quot;&gt;SwiftLint&lt;/a&gt;: is a tool that enforces Swift style and conventions as errors and warnings directly inside Xcode&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-6&quot;&gt;开发工具&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;RESTful Api 测试 ：&lt;a href=&quot;https://luckymarmot.com/de/paw&quot;&gt;PAW&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;抓包工具：&lt;a href=&quot;https://www.charlesproxy.com/&quot;&gt;Charles&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;一直被许多开发人员忽视的 Apple 官方性能检测工具：&lt;a href=&quot;https://developer.apple.com/library/watchos/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/index.html&quot;&gt;Instruments&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;崩溃追踪：&lt;a href=&quot;https://get.fabric.io/&quot;&gt;Fabric&lt;/a&gt; 的 Crashlytics，可以及时发送崩溃信息到你的邮箱，Fabric 还有用户统计，短信验证码的服务&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;统计工具：&lt;a href=&quot;https://mixpanel.com/&quot;&gt;Mixpanel&lt;/a&gt; 事件统计，事件可以随意组合查看统计结果&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;自动化： &lt;a href=&quot;https://fastlane.tools&quot;&gt;Fastlane&lt;/a&gt;，百万开发者在用&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Git: &lt;a href=&quot;https://www.sourcetreeapp.com/&quot;&gt;Source Tree&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;持续集成：&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Jenkins,&lt;/li&gt;
+  &lt;li&gt;TravisCI(CircelCI),&lt;/li&gt;
+  &lt;li&gt;OS X Server  集成&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-7&quot;&gt;项目管理 和 个人日程管理&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.teambition.com&quot;&gt;Teambition&lt;/a&gt; ，国内第一， UI 和体验绝对赞，一直是忠实粉丝。适合团队和个人，棒&lt;/p&gt;
+
 </description>
-    <link>http://www.zhangxiaolian.com/</link>
-    <atom:link href="http://www.zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 07 May 2016 09:46:21 +0800</pubDate>
-    <lastBuildDate>Sat, 07 May 2016 09:46:21 +0800</lastBuildDate>
-    <generator>Jekyll v3.0.3</generator>
-    
-      <item>
-        <title>爱永远在心中</title>
+				<pubDate>Sat, 07 May 2016 00:00:00 +0800</pubDate>
+				<link>http://www.zhangxiaolian.com/2016/05/07/iOS-Overview/</link>
+				<guid isPermaLink="true">http://www.zhangxiaolian.com/2016/05/07/iOS-Overview/</guid>
+			</item>
+		
+			<item>
+				<title>爱永远在心中</title>
         <description>&lt;p&gt;忍别离，不忍却又别离，别离难忍忍别离，托鸿雁南去，不知此心何寄 ……&lt;/p&gt;
 
 &lt;p&gt;从 Teambition 离职快三周了，一直念念不忘，每每想到离开深爱的同事们，就会特别感伤。&lt;/p&gt;
@@ -78,19 +156,13 @@
 
 &lt;p&gt;— 2016 年 5 月 7 号 9:41&lt;/p&gt;
 </description>
-        <pubDate>Fri, 22 Apr 2016 10:50:08 +0800</pubDate>
-        <link>http://www.zhangxiaolian.com/2016/04/Love-forever-in-heart</link>
-        <guid isPermaLink="true">http://www.zhangxiaolian.com/2016/04/Love-forever-in-heart</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>值得关注的iOS开发者 （持续更新......）</title>
+				<pubDate>Fri, 22 Apr 2016 10:50:08 +0800</pubDate>
+				<link>http://www.zhangxiaolian.com/2016/04/22/Love-forever-in-heart/</link>
+				<guid isPermaLink="true">http://www.zhangxiaolian.com/2016/04/22/Love-forever-in-heart/</guid>
+			</item>
+		
+			<item>
+				<title>值得关注的iOS开发者 （持续更新......）</title>
         <description>&lt;h3 id=&quot;ios-&quot;&gt;值得关注的iOS开发者 （持续更新……）&lt;/h3&gt;
 
 &lt;h4 id=&quot;chris-lattner&quot;&gt;1、Chris Lattner&lt;/h4&gt;
@@ -266,19 +338,13 @@
 
 &lt;p&gt;整理自：&lt;a href=&quot;https://medium.com/app-coder-io/52-people-every-ios-developer-should-follow-on-twitter-25ca8915369a#.rl4zta2x5&quot;&gt;https://medium.com/app-coder-io/52-people-every-ios-developer-should-follow-on-twitter-25ca8915369a#.rl4zta2x5&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 19 Apr 2016 09:20:08 +0800</pubDate>
-        <link>http://www.zhangxiaolian.com/2016/04/Nice-iOS-Developer</link>
-        <guid isPermaLink="true">http://www.zhangxiaolian.com/2016/04/Nice-iOS-Developer</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>快速为自己的库创建 cocoapod</title>
+				<pubDate>Tue, 19 Apr 2016 09:20:08 +0800</pubDate>
+				<link>http://www.zhangxiaolian.com/2016/04/19/Nice-iOS-Developer/</link>
+				<guid isPermaLink="true">http://www.zhangxiaolian.com/2016/04/19/Nice-iOS-Developer/</guid>
+			</item>
+		
+			<item>
+				<title>快速为自己的库创建 cocoapod</title>
         <description>&lt;h3 id=&quot;cocoapods&quot;&gt;快速为自己的库创建 cocoapods&lt;/h3&gt;
 
 &lt;h4 id=&quot;github-&quot;&gt;1、在 Github 上创建仓库&lt;/h4&gt;
@@ -407,19 +473,13 @@ end
 
 &lt;p&gt;demo 已上传 &lt;a href=&quot;https://github.com/zhangxiaolian1991/PodDemo&quot;&gt;Github&lt;/a&gt;，请自由 Star&lt;/p&gt;
 </description>
-        <pubDate>Mon, 18 Apr 2016 17:32:08 +0800</pubDate>
-        <link>http://www.zhangxiaolian.com/2016/04/Fast-Create-Pod</link>
-        <guid isPermaLink="true">http://www.zhangxiaolian.com/2016/04/Fast-Create-Pod</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Auto Layout 编程指南</title>
+				<pubDate>Mon, 18 Apr 2016 17:32:08 +0800</pubDate>
+				<link>http://www.zhangxiaolian.com/2016/04/18/Fast-Create-Pod/</link>
+				<guid isPermaLink="true">http://www.zhangxiaolian.com/2016/04/18/Fast-Create-Pod/</guid>
+			</item>
+		
+			<item>
+				<title>Auto Layout 编程指南</title>
         <description>&lt;h3 id=&quot;auto-layout&quot;&gt;理解 Auto Layout&lt;/h3&gt;
 
 &lt;p&gt;Auto Layout 会动态计算在 View hierarchy 中所有的 View 的大小和位置，并根据 contrainst 进行布局。例如，一个 button 在 imageView 上的 contrainst 为水平居中并且离顶部 8 个像素点的距离 ，当 imageView 的 size 或者 position 改变的时候，button 的 position 会动态的改变以适应前面设置的 contrainst。&lt;/p&gt;
@@ -457,19 +517,13 @@ end
 &lt;/ul&gt;
 
 </description>
-        <pubDate>Wed, 30 Mar 2016 23:32:08 +0800</pubDate>
-        <link>http://www.zhangxiaolian.com/2016/03/Auto-Layout-Guide</link>
-        <guid isPermaLink="true">http://www.zhangxiaolian.com/2016/03/Auto-Layout-Guide</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>cocoapods use and create</title>
+				<pubDate>Wed, 30 Mar 2016 23:32:08 +0800</pubDate>
+				<link>http://www.zhangxiaolian.com/2016/03/30/Auto-Layout-Guide/</link>
+				<guid isPermaLink="true">http://www.zhangxiaolian.com/2016/03/30/Auto-Layout-Guide/</guid>
+			</item>
+		
+			<item>
+				<title>cocoapods use and create</title>
         <description>&lt;h3 id=&quot;install&quot;&gt;Install&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo gem install cocoapods
@@ -722,16 +776,10 @@ Updating spec repo `master`
 &lt;p&gt;All done&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 29 Mar 2016 11:00:08 +0800</pubDate>
-        <link>http://www.zhangxiaolian.com/2016/03/cocoapods-use-and-create</link>
-        <guid isPermaLink="true">http://www.zhangxiaolian.com/2016/03/cocoapods-use-and-create</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-  </channel>
+				<pubDate>Tue, 29 Mar 2016 11:00:08 +0800</pubDate>
+				<link>http://www.zhangxiaolian.com/2016/03/29/cocoapods-use-and-create/</link>
+				<guid isPermaLink="true">http://www.zhangxiaolian.com/2016/03/29/cocoapods-use-and-create/</guid>
+			</item>
+		
+	</channel>
 </rss>

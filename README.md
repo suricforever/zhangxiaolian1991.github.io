@@ -1,23 +1,25 @@
-# material-jekyll-theme
-[Demo](http://alexcarpenter.me/material-jekyll-theme)
+# Kiko
 
-![Material Jekyll Theme](https://d13yacurqjgara.cloudfront.net/users/37718/screenshots/2430279/slice_1.jpg)
+[Kiko](http://github.com/gfjaru/Kiko) is a theme for [Jekyll](http://jekyllrb.com), the static site generator. It's designed and developed by [@gfjaru](https://twitter.com/gfjaru).
 
-## Getting started
-1. `git clone https://github.com/alexcarpenter/material-jekyll-theme.git`
-2. `cd material-jekyll-theme`
-3. Configure the `_config.yml` file as needed
-4. `jekyll serve`
+[See it live](https://kiko.gfjaru.com/)
 
-## Options
-Customize your options within the `_config.yml` file.
+## To do lists
 
-+ Theme
-  - Green
-  - Blue
-  - Orange
-  - Purple
-  - Grey
-+ Fixed Navigation
-  - True
-  - False
+Next update is new theme based from Kiko.
+
+## Get Started
+
+1. Fork this repository
+2. Clone the repository to your computer.<br />`git clone https://github.com/YOURUSERNAME/Kiko`  
+3. Run it.<br />`jekyll serve`
+4. Go to http://127.0.0.1:4000.
+
+## Make it yours
+
+1. Change name and add/remove nav at `_config.yml`.
+2. Change `about.md`.
+
+## License
+
+This theme is released under MIT License.

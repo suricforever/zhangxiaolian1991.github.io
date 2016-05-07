@@ -1,24 +1,53 @@
-# Site settings
-title: 张晓连的Blog
-email: zhangxiaolian1991@gmail.com
-description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: ""
-url: "http://www.zhangxiaolian.com"
-fixedNav: 'true' # true or false
-theme: purple # green, blue, orange, purple, grey
-twitterUsername: SuricZhang
-githubUsername: zhangxiaolian1991
-dribbbleUsername:
-codepenUsername:
+# # # # # # # #
+#   Suric #
+# # # # # # # #
 
-# Build settings
-future: true
-permalink: /:year/:month/:title
-markdown: kramdown
-include: [_pages]
-exclude: [_site, CHANGELOG.md, LICENSE, README.md]
+# Basic
+name:               "zhangxiaolian"
+description:        "my blog theme for jekyll"
+
+# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
+url:                "http://www.zhangxiaolian.com"
+author:             "zhangxiaolian"
+twitter:
+  username:         "SuricZhang"
+#facebook:
+#  app_id:           1234
+#    publisher:      1234
+
+# URL
+baseurl:            ""
+#baseurl:            "" #For Root Domain
+permalink:          /:year/:month/:day/:title/
+
+# Markdown
+markdown:           kramdown
+
+# Navigation
+nav:
+  - name:           "About"
+    href:           "//zhangxiaolian.com/about"
+  - name:           "Github"
+    href:           "//github.com/zhangxiaolian1991"
+
+# Sass
 sass:
-  style: compressed
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+gems:
+  - jekyll-seo-tag
