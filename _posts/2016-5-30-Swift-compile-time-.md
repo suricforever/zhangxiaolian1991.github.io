@@ -19,16 +19,16 @@ Swift 项目编译越来越慢？ 一行命令让你知道所有 Swift 文件的
 
 当然，你也可以通过配置 Xcode 来获得编译时间，在Build Setting 里 OTHER SWIFT FLAGS 为 “ -Xfrontend  -debug-time-function-bodies ”
 
-![](../assets/Swift-compile-time-1.png)
+![]({{ site.url }}/assets/Swift-compile-time-1.png)
 
 在 Report navigator 里，点击文件 ，右键 ，选择  **expand all transcripts**, 查看每个 Swift 文件的运行时间
 
-![](../assets/Swift-compile-time-2.png)
+![]({{ site.url }}/assets/Swift-compile-time-2.png)
 
 ### 加速你的 Swift 编译时间
 
 找出耗时比较长的进行优化，下面就是一个需要注意的地方
 
-![](../assets/Swift-compile-time-3.png)
+![]({{ site.url }}/assets/Swift-compile-time-3.png)
 
 参考链接：<http://irace.me/swift-profiling>

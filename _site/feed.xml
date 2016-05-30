@@ -27,17 +27,17 @@
 
 &lt;p&gt;当然，你也可以通过配置 Xcode 来获得编译时间，在Build Setting 里 OTHER SWIFT FLAGS 为 “ -Xfrontend  -debug-time-function-bodies ”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/Swift-compile-time-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.zhangxiaolian.com/assets/Swift-compile-time-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;在 Report navigator 里，点击文件 ，右键 ，选择  &lt;strong&gt;expand all transcripts&lt;/strong&gt;, 查看每个 Swift 文件的运行时间&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/Swift-compile-time-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.zhangxiaolian.com/assets/Swift-compile-time-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;swift-&quot;&gt;加速你的 Swift 编译时间&lt;/h3&gt;
 
 &lt;p&gt;找出耗时比较长的进行优化，下面就是一个需要注意的地方&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/Swift-compile-time-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.zhangxiaolian.com/assets/Swift-compile-time-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;参考链接：&lt;a href=&quot;http://irace.me/swift-profiling&quot;&gt;http://irace.me/swift-profiling&lt;/a&gt;&lt;/p&gt;
 </description>
