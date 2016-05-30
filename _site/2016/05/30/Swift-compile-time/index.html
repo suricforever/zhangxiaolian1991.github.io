@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swift 编译时间的简单介绍</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for zhangxiaolian" href="/feed.xml" />
+  <!-- Begin Jekyll SEO tag v1.3.3 -->
+<title>Swift 编译时间的简单介绍 - zhangxiaolian</title>
+<meta property="og:title" content="Swift 编译时间的简单介绍" />
+<meta name="description" content="命令行" />
+<meta property="og:description" content="命令行" />
+<link rel="canonical" href="http://www.zhangxiaolian.com/2016/05/30/Swift-compile-time/" />
+<meta property="og:url" content="http://www.zhangxiaolian.com/2016/05/30/Swift-compile-time/" />
+<meta property="og:site_name" content="zhangxiaolian" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-05-30T00:00:00+08:00" />
+<link rel="prev" href="http://www.zhangxiaolian.com/2016/05/07/iOS-Overview/" title="iOS - 知识体系" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@SuricZhang" />
+<meta name="twitter:creator" content="@zhangxiaolian" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Swift 编译时间的简单介绍",
+    "datePublished": "2016-05-30T00:00:00+08:00",
+    "description": "命令行",
+    "url": "http://www.zhangxiaolian.com/2016/05/30/Swift-compile-time/"
+  }
+</script>
+<!-- End Jekyll SEO tag -->
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+  <h1 class="masthead-title--small">
+    <a href="/">zhangxiaolian</a>
+  </h1>
+</header>
+<div class="content page">
+  <h1 class="page-title">Swift 编译时间的简单介绍</h1>
+  <h3 id="section">命令行</h3>
+
+<p>Swift 项目编译越来越慢？ 一行命令让你知道所有 Swift 文件的编译时间，在你的工程目录下执行一下命令行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>xcodebuild -workspace App.xcworkspace -scheme App clean build OTHER_SWIFT_FLAGS="-Xfrontend -debug-time-function-bodies" | grep .[0-9]ms | grep -v ^0.[0-9]ms | sort -nr &gt; culprits.txt
+</code></pre>
+</div>
+
+<p>如果没有 workspace，只有 .xcodeproj 文件，请执行以下命令：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>xcodebuild -project App. xcodeproj -scheme App clean build OTHER_SWIFT_FLAGS="-Xfrontend -debug-time-function-bodies" | grep .[0-9]ms | grep -v ^0.[0-9]ms | sort -nr &gt; culprits.txt
+</code></pre>
+</div>
+
+<p>两行命令的意思都是一样的:配置 Build Setting 里 OTHER SWIFT FLAGS 为 “ -Xfrontend  -debug-time-function-bodies ” ， Clean and Build 工程，将运行时间大于 0ms 的文件 按时间排序 输出到 culprits.txt 文件。</p>
+
+<h3 id="xcode">配置 Xcode</h3>
+
+<p>当然，你也可以通过配置 Xcode 来获得编译时间，在Build Setting 里 OTHER SWIFT FLAGS 为 “ -Xfrontend  -debug-time-function-bodies ”</p>
+
+<p><img src="../assets/Swift-compile-time-1.png" alt="" /></p>
+
+<p>在 Report navigator 里，点击文件 ，右键 ，选择  <strong>expand all transcripts</strong>, 查看每个 Swift 文件的运行时间</p>
+
+<p><img src="../assets/Swift-compile-time-2.png" alt="" /></p>
+
+<h3 id="swift-">加速你的 Swift 编译时间</h3>
+
+<p>找出耗时比较长的进行优化，下面就是一个需要注意的地方</p>
+
+<p><img src="../assets/Swift-compile-time-3.png" alt="" /></p>
+
+<p>参考链接：<a href="http://irace.me/swift-profiling">http://irace.me/swift-profiling</a></p>
+
+</div>
+
+  </div>
+</body>
+</html>
