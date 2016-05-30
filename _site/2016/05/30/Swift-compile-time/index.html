@@ -44,19 +44,19 @@
   <h1 class="page-title">Swift 编译时间的简单介绍</h1>
   <h3 id="section">命令行</h3>
 
-<p>Swift 项目编译越来越慢？ 一行命令让你知道所有 Swift 文件的编译时间，在你的工程目录下执行一下命令行：</p>
+<p>Swift 项目编译越来越慢？ 一行命令让你知道所有 Swift 文件的编译时间，在你的工程目录下执行以下命令行：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>xcodebuild -workspace App.xcworkspace -scheme App clean build OTHER_SWIFT_FLAGS="-Xfrontend -debug-time-function-bodies" | grep .[0-9]ms | grep -v ^0.[0-9]ms | sort -nr &gt; culprits.txt
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">
+xcodebuild -workspace App.xcworkspace -scheme App clean build OTHER_SWIFT_FLAGS="-Xfrontend -debug-time-function-bodies" | grep .[0-9]ms | grep -v ^0.[0-9]ms | sort -nr &gt; culprits.txt
+</code></p>
 
 <p>如果没有 workspace，只有 .xcodeproj 文件，请执行以下命令：</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>xcodebuild -project App. xcodeproj -scheme App clean build OTHER_SWIFT_FLAGS="-Xfrontend -debug-time-function-bodies" | grep .[0-9]ms | grep -v ^0.[0-9]ms | sort -nr &gt; culprits.txt
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">
+xcodebuild -project App. xcodeproj -scheme App clean build OTHER_SWIFT_FLAGS="-Xfrontend -debug-time-function-bodies" | grep .[0-9]ms | grep -v ^0.[0-9]ms | sort -nr &gt; culprits.txt
+</code></p>
 
-<p>两行命令的意思都是一样的:配置 Build Setting 里 OTHER SWIFT FLAGS 为 “ -Xfrontend  -debug-time-function-bodies ” ， Clean and Build 工程，将运行时间大于 0ms 的文件 按时间排序 输出到 culprits.txt 文件。</p>
+<p>两行命令的意思都是一样的 : 配置 Build Setting 里 OTHER SWIFT FLAGS 为 “ -Xfrontend  -debug-time-function-bodies ” ， Clean and Build 工程，将运行时间大于 0ms 的文件 按时间排序 输出到 culprits.txt 文件。</p>
 
 <h3 id="xcode">配置 Xcode</h3>
 
