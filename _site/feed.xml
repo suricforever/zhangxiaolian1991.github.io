@@ -56,24 +56,7 @@ xcodebuild -project App. xcodeproj -scheme App clean build OTHER_SWIFT_FLAGS=&qu
 
 &lt;h2 id=&quot;section-3&quot;&gt;其他&lt;/h2&gt;
 
-&lt;h4 id=&quot;dependency-manager-&quot;&gt;Dependency manager （包管理工具）&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cocoapods.org/&quot;&gt;CocoaPods&lt;/a&gt;: 目前使用最广泛的包管理工具&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/Carthage/Carthage&quot;&gt;Carthage&lt;/a&gt;: 去中心化的包管理工具，swift 项目建议使用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;section-4&quot;&gt;单元测试&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Objective-C :&lt;a href=&quot;https://github.com/specta/specta&quot;&gt;Specta&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Swift: &lt;a href=&quot;https://github.com/Quick/Quick&quot;&gt;Quick&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;代码Review： Reviewable,&lt;/li&gt;
-  &lt;li&gt;测试代码覆盖： Coveralls, Coverage Status&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;section-5&quot;&gt;代码规范&lt;/h4&gt;
+&lt;h4 id=&quot;section-4&quot;&gt;代码规范&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -87,7 +70,36 @@ xcodebuild -project App. xcodeproj -scheme App clean build OTHER_SWIFT_FLAGS=&qu
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;section-6&quot;&gt;开发工具&lt;/h4&gt;
+&lt;h4 id=&quot;dependency-manager-&quot;&gt;Dependency manager （包管理工具）&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cocoapods.org/&quot;&gt;CocoaPods&lt;/a&gt;: 目前使用最广泛的包管理工具&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Carthage/Carthage&quot;&gt;Carthage&lt;/a&gt;: 去中心化的包管理工具，swift 项目建议使用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-5&quot;&gt;单元测试&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Objective-C :&lt;a href=&quot;https://github.com/specta/specta&quot;&gt;Specta&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Swift: &lt;a href=&quot;https://github.com/Quick/Quick&quot;&gt;Quick&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;代码Review： Reviewable,&lt;/li&gt;
+  &lt;li&gt;测试代码覆盖： Coveralls, Coverage Status&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-6&quot;&gt;热更新&lt;/h4&gt;
+&lt;p&gt;线上 bug 很严重，不想等审核试试热更新吧，随时随地修复你的 严重bug&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/alibaba/wax&quot;&gt;Wax&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/bang590/JSPatch&quot;&gt;JSPatch&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-7&quot;&gt;开发工具&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -119,7 +131,7 @@ xcodebuild -project App. xcodeproj -scheme App clean build OTHER_SWIFT_FLAGS=&qu
   &lt;li&gt;OS X Server  集成&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;section-7&quot;&gt;项目管理 和 个人日程管理&lt;/h4&gt;
+&lt;h4 id=&quot;section-8&quot;&gt;项目管理 和 个人日程管理&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.teambition.com&quot;&gt;Teambition&lt;/a&gt; ，国内第一， UI 和体验绝对赞，一直是忠实粉丝。适合团队和个人，棒&lt;/p&gt;
 

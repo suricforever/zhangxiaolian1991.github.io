@@ -12,6 +12,14 @@ title: iOS - 知识体系
 
 ## 其他
 
+#### 代码规范
+
+  * Objective-C:<https://github.com/raywenderlich/objective-c-style-guide> 
+  
+  * Swift: <https://github.com/raywenderlich/swift-style-guide>
+  
+  * [SwiftLint](https://github.com/realm/SwiftLint): is a tool that enforces Swift style and conventions as errors and warnings directly inside Xcode
+  
 #### Dependency manager （包管理工具）
 * [CocoaPods](https://cocoapods.org/): 目前使用最广泛的包管理工具
 * [Carthage](https://github.com/Carthage/Carthage): 去中心化的包管理工具，swift 项目建议使用
@@ -24,14 +32,13 @@ title: iOS - 知识体系
   * 代码Review： Reviewable,
   * 测试代码覆盖： Coveralls, Coverage Status
 
-#### 代码规范
+#### 热更新
+  线上 bug 很严重，不想等审核试试热更新吧，随时随地修复你的 严重bug
 
-  * Objective-C:<https://github.com/raywenderlich/objective-c-style-guide> 
+  * [Wax](https://github.com/alibaba/wax)
   
-  * Swift: <https://github.com/raywenderlich/swift-style-guide>
-  
-  * [SwiftLint](https://github.com/realm/SwiftLint): is a tool that enforces Swift style and conventions as errors and warnings directly inside Xcode
- 
+  * [JSPatch](https://github.com/bang590/JSPatch)
+   
 #### 开发工具
 
 * RESTful Api 测试 ：[PAW](https://luckymarmot.com/de/paw)
