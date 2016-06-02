@@ -71,6 +71,7 @@ xcodebuild -project App. xcodeproj -scheme App clean build OTHER_SWIFT_FLAGS=&qu
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;dependency-manager-&quot;&gt;Dependency manager （包管理工具）&lt;/h4&gt;
+
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://cocoapods.org/&quot;&gt;CocoaPods&lt;/a&gt;: 目前使用最广泛的包管理工具&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/Carthage/Carthage&quot;&gt;Carthage&lt;/a&gt;: 去中心化的包管理工具，swift 项目建议使用&lt;/li&gt;
