@@ -57,9 +57,9 @@ title: iOS - 知识体系
 * Git: [Source Tree](https://www.sourcetreeapp.com/)
 
 * 持续集成：   
-
- * Jenkins,
- * TravisCI(CircelCI),
+ * [Jenkins](http://jenkins-ci.org/)
+ * [TravisCI](https://travis-ci.com/)
+ * [CircelCI](https://circleci.com/)
  * OS X Server  集成
 
 #### 项目管理 和 个人日程管理

@@ -124,11 +124,10 @@ xcodebuild -project App. xcodeproj -scheme App clean build OTHER_SWIFT_FLAGS=&qu
   &lt;li&gt;
     &lt;p&gt;Git: &lt;a href=&quot;https://www.sourcetreeapp.com/&quot;&gt;Source Tree&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;持续集成：&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Jenkins,&lt;/li&gt;
-  &lt;li&gt;TravisCI(CircelCI),&lt;/li&gt;
+  &lt;li&gt;持续集成：&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jenkins-ci.org/&quot;&gt;Jenkins&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://travis-ci.com/&quot;&gt;TravisCI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://circleci.com/&quot;&gt;CircelCI&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;OS X Server  集成&lt;/li&gt;
 &lt;/ul&gt;
 
