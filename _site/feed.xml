@@ -6,6 +6,17 @@
 		<atom:link href="http://www.zhangxiaolian.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Xcode 警告和报错的修复 tips</title>
+        <description>&lt;h3 id=&quot;multiple-build-commands-for-output-file&quot;&gt;1. Multiple build commands for output file&lt;/h3&gt;
+
+&lt;p&gt;出现这个 warning 一般是重复引用或者重复关联了，对应的 Target -&amp;gt; Build Phases  搜索对应的关键字，去掉多余的即可&lt;/p&gt;
+</description>
+				<pubDate>Wed, 12 Oct 2016 00:00:00 +0800</pubDate>
+				<link>http://www.zhangxiaolian.com/2016/10/12/Xcode-warning&error-fix/</link>
+				<guid isPermaLink="true">http://www.zhangxiaolian.com/2016/10/12/Xcode-warning&error-fix/</guid>
+			</item>
+		
+			<item>
 				<title>Swift 编译时间的简单介绍</title>
         <description>&lt;h3 id=&quot;section&quot;&gt;命令行&lt;/h3&gt;
 
